@@ -51,6 +51,7 @@ cdef extern from "numpy/arrayobject.h":
 
 from numpy import float32 as DTYPE
 from numpy import float64 as DOUBLE
+from numpy import intp
 
 cdef double INFINITY = np.inf
 cdef double EPSILON = np.finfo('double').eps
@@ -587,13 +588,22 @@ cdef class Tree:
         def __get__(self):
             return self._get_value_ndarray()[:self.node_count]
 
-    def __cinit__(self, int n_features, np.ndarray[SIZE_t, ndim=1] n_classes,
+    def __cinit__(self, int n_features, np.ndarray n_classes,
                   int n_outputs):
         """Constructor."""
+        if n_classes.ndim != 1:
+            raise ValueError('nope')
+
+        try:
+            n_classes = n_classes.astype(dtype=intp)
+        except Exception as exc:
+            raise ValueError('converting issues')
+
         # Input/Output layout
         self.n_features = n_features
         self.n_outputs = n_outputs
         self.n_classes = NULL
+
         safe_realloc(&self.n_classes, n_outputs)
 
         self.max_n_classes = np.max(n_classes)
@@ -648,9 +658,12 @@ cdef class Tree:
         value_shape = (node_ndarray.shape[0], self.n_outputs,
                        self.max_n_classes)
 
+        print(node_ndarray.dtype)
+        print(NODE_DTYPE)
+
         if (node_ndarray.dtype != NODE_DTYPE):
             # possible mismatch of big/little endian due to serialization
-            # on a different architecture. Try swapping the byte order.  
+            # on a different architecture. Try swapping the byte order.
             node_ndarray = node_ndarray.byteswap().newbyteorder()
             if (node_ndarray.dtype != NODE_DTYPE):
                 raise ValueError('Did not recognise loaded array dytpe')
