@@ -5,11 +5,14 @@ import re
 from copy import deepcopy
 from functools import partial, wraps
 from inspect import signature
+import io
+import copyreg
 
 import numpy as np
 from scipy import sparse
 from scipy.stats import rankdata
 import joblib
+from joblib.numpy_pickle import NumpyPickler
 
 from . import IS_PYPY
 from .. import config_context
@@ -1802,6 +1805,43 @@ def check_nonsquare_error(name, estimator_orig):
         estimator.fit(X, y)
 
 
+def get_estimator_with_different_endianness_through_pickle(estimator):
+    def reduce_ndarray(arr):
+        return arr.byteswap().newbyteorder().__reduce__()
+
+    def pickle_dump_with_non_native_endianness(estimator):
+        f = io.BytesIO()
+        p = pickle.Pickler(f)
+        p.dispatch_table = copyreg.dispatch_table.copy()
+        p.dispatch_table[np.ndarray] = reduce_ndarray
+
+        p.dump(estimator)
+        f.seek(0)
+        return f
+
+    return pickle.load(pickle_dump_with_non_native_endianness(estimator))
+
+
+def get_estimator_with_different_endianness_through_joblib_pickle(estimator):
+    class NonNativeEndiannessNumpyPickler(NumpyPickler):
+        def save(self, obj):
+            if isinstance(obj, np.ndarray):
+                obj = obj.byteswap().newbyteorder()
+            super().save(obj)
+
+    def joblib_dump_with_non_native_endianness(estimator):
+        f = io.BytesIO()
+        p = NonNativeEndiannessNumpyPickler(f)
+
+        p.dump(estimator)
+        f.seek(0)
+        return f
+
+    return joblib.load(
+        get_estimator_with_different_endianness_through_joblib_pickle(estimator)
+    )
+
+
 @ignore_warnings
 def check_estimators_pickle(name, estimator_orig):
     """Test that we can pickle all estimators."""
@@ -1843,16 +1883,22 @@ def check_estimators_pickle(name, estimator_orig):
         # strict check for sklearn estimators that are not implemented in test
         # modules.
         assert b"version" in pickled_estimator
-    unpickled_estimator = pickle.loads(pickled_estimator)
 
-    result = dict()
-    for method in check_methods:
-        if hasattr(estimator, method):
-            result[method] = getattr(estimator, method)(X)
+    unpickled_estimators = [
+        pickle.loads(pickled_estimator),
+        get_estimator_with_different_endianness_through_pickle(estimator),
+        # get_estimator_with_different_endianness_through_joblib_pickle(estimator),
+    ]
 
-    for method in result:
-        unpickled_result = getattr(unpickled_estimator, method)(X)
-        assert_allclose_dense_sparse(result[method], unpickled_result)
+    for unpickled_estimator in unpickled_estimators:
+        result = dict()
+        for method in check_methods:
+            if hasattr(estimator, method):
+                result[method] = getattr(estimator, method)(X)
+
+        for method in result:
+            unpickled_result = getattr(unpickled_estimator, method)(X)
+            assert_allclose_dense_sparse(result[method], unpickled_result)
 
 
 @ignore_warnings(category=FutureWarning)
