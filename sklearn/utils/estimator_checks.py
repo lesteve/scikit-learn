@@ -1837,9 +1837,7 @@ def get_estimator_with_different_endianness_through_joblib_pickle(estimator):
         f.seek(0)
         return f
 
-    return joblib.load(
-        get_estimator_with_different_endianness_through_joblib_pickle(estimator)
-    )
+    return joblib.load(joblib_dump_with_non_native_endianness(estimator))
 
 
 @ignore_warnings
@@ -1887,7 +1885,7 @@ def check_estimators_pickle(name, estimator_orig):
     unpickled_estimators = [
         pickle.loads(pickled_estimator),
         get_estimator_with_different_endianness_through_pickle(estimator),
-        # get_estimator_with_different_endianness_through_joblib_pickle(estimator),
+        get_estimator_with_different_endianness_through_joblib_pickle(estimator),
     ]
 
     for unpickled_estimator in unpickled_estimators:
