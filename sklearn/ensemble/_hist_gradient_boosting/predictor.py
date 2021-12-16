@@ -6,6 +6,9 @@ This module contains the TreePredictor class which is used for prediction.
 import numpy as np
 
 from .common import Y_DTYPE
+from .common import PREDICTOR_RECORD_DTYPE
+from .common import X_BITSET_INNER_DTYPE
+
 from ._predictor import _predict_from_raw_data
 from ._predictor import _predict_from_binned_data
 from ._predictor import _compute_partial_dependence
@@ -123,3 +126,17 @@ class TreePredictor:
             point.
         """
         _compute_partial_dependence(self.nodes, grid, target_features, out)
+
+    def __setstate__(self, state):
+        try:
+            super().__setstate__(state)
+        except AttributeError:
+            self.__dict__.update(state)
+
+        self.nodes = self.nodes.astype(PREDICTOR_RECORD_DTYPE, casting="same_kind")
+        self.raw_left_cat_bitsets = self.raw_left_cat_bitsets.astype(
+            X_BITSET_INNER_DTYPE, casting="same_kind"
+        )
+        self.binned_left_cat_bitsets = self.binned_left_cat_bitsets.astype(
+            X_BITSET_INNER_DTYPE, casting="same_kind"
+        )
