@@ -218,8 +218,8 @@ cdef class DistanceMetric:
         set state for pickling
         """
         self.p = state[0]
-        self.vec = ReadonlyArrayWrapper(state[1])
-        self.mat = ReadonlyArrayWrapper(state[2])
+        self.vec = ReadonlyArrayWrapper(state[1].astype(DTYPE))
+        self.mat = ReadonlyArrayWrapper(state[2].astype(DTYPE))
         if self.__class__.__name__ == "PyFuncDistance":
             self.func = state[3]
             self.kwargs = state[4]

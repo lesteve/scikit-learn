@@ -1000,8 +1000,12 @@ cdef class BinaryTree:
             self.sum_weight = <DTYPE_t> n_samples
 
     def _update_memviews(self):
+        print('data:', np.asarray(self.data).dtype)
+        print('data_arr:', self.data_arr.dtype)
         self.data = self.data_arr
         self.idx_array = self.idx_array_arr
+        print('node_data:', np.asarray(self.node_data).dtype)
+        print('node_data_arr:', self.node_data_arr.dtype)
         self.node_data = self.node_data_arr
         self.node_bounds = self.node_bounds_arr
 
@@ -1023,6 +1027,7 @@ cdef class BinaryTree:
             # pass None to avoid confusion with the empty place holder
             # of size 1 from __cinit__
             sample_weight_arr = None
+        # This is probably here that we want to check that node_data_arr has the right dtype and if not convert it
         return (self.data_arr,
                 self.idx_array_arr,
                 self.node_data_arr,
@@ -1041,10 +1046,13 @@ cdef class BinaryTree:
         """
         set state for pickling
         """
-        self.data_arr = state[0]
-        self.idx_array_arr = state[1]
-        self.node_data_arr = state[2]
-        self.node_bounds_arr = state[3]
+        self.data_arr = state[0].astype(DTYPE)
+        self.idx_array_arr = state[1].astype(ITYPE)
+        print('state:', type(state[2]))
+        print('state dtype:', state[2].dtype)
+        print('NodeData:', NodeData)
+        self.node_data_arr = state[2].astype(NodeData)
+        self.node_bounds_arr = state[3].astype(DTYPE)
         self.leaf_size = state[4]
         self.n_levels = state[5]
         self.n_nodes = state[6]
