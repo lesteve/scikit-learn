@@ -1717,3 +1717,15 @@ class NMF(_ClassNamePrefixFeaturesOutMixin, TransformerMixin, BaseEstimator):
     def _n_features_out(self):
         """Number of transformed output features."""
         return self.components_.shape[0]
+
+    def __setstate__(self, state):
+        try:
+            super().__setstate__(state)
+        except AttributeError:
+            self.__dict__.update(state)
+
+        # TODO not sure this has to be a float64, it seems this should be the
+        # same as X but X can be a float32 for example. Maybe the dtype check
+        # is too stringent in _check_w_h(self, X, W, H, update_H) ...
+        # We can not now as unpickling time what X dtype is going to be
+        self.components_ = self.components_.astype(np.float64, casting="equiv")
