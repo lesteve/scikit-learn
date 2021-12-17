@@ -439,6 +439,19 @@ class BaseLibSVM(BaseEstimator, metaclass=ABCMeta):
                 )
 
         svm_type = LIBSVM_IMPL.index(self._impl)
+        for i, each in enumerate(
+            [
+                X,
+                self.support_,
+                self.support_vectors_,
+                self._n_support,
+                self._dual_coef_,
+                self._intercept_,
+                self._probA,
+                self._probB,
+            ]
+        ):
+            print(i, each.dtype)
 
         return libsvm.predict(
             X,
@@ -674,6 +687,24 @@ class BaseLibSVM(BaseEstimator, metaclass=ABCMeta):
             # SVR and OneClass
             # _n_support has size 2, we make it size 1
             return np.array([self._n_support[0]])
+
+    def __setstate__(self, state):
+        try:
+            super().__setstate__(state)
+        except AttributeError:
+            self.__dict__.update(state)
+
+        self.support_ = self.support_.astype(np.int32, casting="equiv")
+        self.support_vectors_ = self.support_vectors_.astype(
+            np.float64, casting="equiv"
+        )
+        self._n_support = self._n_support.astype(np.int32, casting="equiv")
+        self._dual_coef_ = self._dual_coef_.astype(np.float64, casting="equiv")
+        self._intercept_ = self._intercept_.astype(np.float64, casting="equiv")
+        self._probA = self._probA.astype(np.float64, casting="equiv")
+        self._probB = self._probB.astype(np.float64, casting="equiv")
+        # TODO there maybe more things (e.g. for sparse predictions which seems
+        # not tested ...)
 
 
 class BaseSVC(ClassifierMixin, BaseLibSVM, metaclass=ABCMeta):
