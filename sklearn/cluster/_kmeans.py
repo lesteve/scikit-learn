@@ -1347,6 +1347,7 @@ class KMeans(TransformerMixin, ClusterMixin, BaseEstimator):
         x_squared_norms = row_norms(X, squared=True)
         sample_weight = _check_sample_weight(sample_weight, X, dtype=X.dtype)
 
+        print("dtype:", self.cluster_centers_.dtype)
         return _labels_inertia_threadpool_limit(
             X, sample_weight, x_squared_norms, self.cluster_centers_, self._n_threads
         )[0]
@@ -1389,6 +1390,16 @@ class KMeans(TransformerMixin, ClusterMixin, BaseEstimator):
                 ),
             },
         }
+
+    def __setstate__(self, state):
+        try:
+            super().__setstate__(state)
+        except AttributeError:
+            self.__dict__.update(state)
+
+        self.cluster_centers_ = check_array(
+            self.cluster_centers_, dtype=[np.float64, np.float32]
+        )
 
 
 def _mini_batch_step(
