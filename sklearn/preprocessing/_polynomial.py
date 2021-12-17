@@ -1011,3 +1011,13 @@ class SplineTransformer(TransformerMixin, BaseEstimator):
             # We chose the last one.
             indices = [j for j in range(XBS.shape[1]) if (j + 1) % n_splines != 0]
             return XBS[:, indices]
+
+    def __setstate__(self, state):
+        try:
+            super().__setstate__(state)
+        except AttributeError:
+            self.__dict__.update(state)
+
+        for spl in self.bsplines_:
+            spl.c = spl.c.astype(np.float64, casting="equiv")
+            spl.t = spl.t.astype(np.float64, casting="equiv")
