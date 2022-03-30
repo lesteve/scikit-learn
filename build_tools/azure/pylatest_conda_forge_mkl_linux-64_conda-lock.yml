@@ -2012,14 +2012,14 @@ package:
     python_abi: 3.10.* *_cp310
     tornado: ''
   hash:
-    md5: 7187d9303fb9e4e1be6dd9e4e6b94e9e
-    sha256: 13fbd00e7187f2ddd141494867e8e3d567a830541717408f97f394e430375768
+    md5: ba219b264d77c62262439c4f0dca9d3f
+    sha256: 9efd7c895d744c0e6ec181babab07285fe2103ded9b71522046bb0bb6ea34f8c
   manager: conda
   name: matplotlib
   optional: false
   platform: linux-64
-  url: https://conda.anaconda.org/conda-forge/linux-64/matplotlib-3.5.363-py310hff52083_0.tar.bz2
-  version: 3.5.363
+  url: https://conda.anaconda.org/conda-forge/linux-64/matplotlib-3.5.364-py310hff52083_0.tar.bz2
+  version: 3.5.364
 - category: main
   dependencies:
     certifi: '>=2017.4.17'
