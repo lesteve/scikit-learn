@@ -12,6 +12,16 @@ if [[ ! -f /.dockerenv ]]; then
     exit 1
 fi
 
+# Chose which version of scikit-learn (release vs development) to install
+branch=$(git rev-parse --abbrev-ref HEAD)
+
+if [[ "$branch" =~ .+\.X ]]; then
+    version="${branch::-2}.*"
+    pip install "scikit-learn==$version"
+else
+    pip install --pre --extra-index https://pypi.anaconda.org/scipy-wheels-nightly/simple scikit-learn
+fi
+
 # Back up content we need from the scikit-learn repo
 TMP_CONTENT_DIR=/tmp/scikit-learn
 mkdir -p $TMP_CONTENT_DIR
