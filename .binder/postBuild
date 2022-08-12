@@ -17,6 +17,9 @@ fi
 branch=$(git rev-parse --abbrev-ref HEAD)
 echo branch: $branch
 
+git log -10
+git remote -v
+
 if [[ "$branch" =~ .+\.X ]]; then
     version="${branch::-2}.*"
     pip install "scikit-learn==$version"
