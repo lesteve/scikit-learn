@@ -12,6 +12,7 @@ if [[ ! -f /.dockerenv ]]; then
     exit 1
 fi
 
+# additional comment to force rebuild?
 # Chose which version of scikit-learn (release vs development) to install
 branch=$(git rev-parse --abbrev-ref HEAD)
 
