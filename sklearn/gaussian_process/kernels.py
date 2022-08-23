@@ -1732,10 +1732,28 @@ class Matern(RBF):
                 D = squareform(dists**2)[:, :, np.newaxis]
 
             if self.nu == 0.5:
+                import pickle
+
+                pickle.dump(K, open("/tmp/K-pypy.pkl", "wb"))
+                pickle.dump(X, open("/tmp/X-pypy.pkl", "wb"))
+                pickle.dump(D, open("/tmp/D-pypy.pkl", "wb"))
                 denominator = np.sqrt(D.sum(axis=2))[:, :, np.newaxis]
-                K_gradient = K[..., np.newaxis] * np.divide(
-                    D, denominator, where=denominator != 0
-                )
+                pickle.dump(denominator, open("/tmp/denominator-pypy.pkl", "wb"))
+
+                # print(denominator[-1, -1, -1])
+                # denominator[denominator == 0.] = 1.
+                division = np.divide(D, denominator, where=denominator != 0)
+                # division[denominator != 0] = 0.
+                K_gradient = K[..., np.newaxis] * division
+
+                # division[denominator != 0] = 0.
+                K_gradient = K[..., np.newaxis] * division
+
+                pickle.dump(K_gradient, open("/tmp/K_gradient-pypy.pkl", "wb"))
+                print(f"{division[-1, -1, -1]=}")
+                print(f"{division[-1, -1, -1]==0=}")
+                print(f"{K_gradient[-1, -1, -1]=}")
+                # 1/0
             elif self.nu == 1.5:
                 K_gradient = 3 * D * np.exp(-np.sqrt(3 * D.sum(-1)))[..., np.newaxis]
             elif self.nu == 2.5:

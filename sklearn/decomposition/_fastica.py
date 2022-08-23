@@ -73,6 +73,7 @@ def _ica_def(X, tol, g, fun_args, max_iter, w_init):
     n_components = w_init.shape[0]
     W = np.zeros((n_components, n_components), dtype=X.dtype)
     n_iter = []
+    epsilon = np.finfo(X.dtype).eps
 
     # j is the index of the extracted component
     for j in range(n_components):
@@ -86,7 +87,11 @@ def _ica_def(X, tol, g, fun_args, max_iter, w_init):
 
             _gs_decorrelation(w1, W, j)
 
-            w1 /= np.sqrt((w1**2).sum())
+            w1_norm = np.sqrt((w1**2).sum())
+            # avoid w1_norm == 0, see
+            # https://github.com/scikit-learn/scikit-learn/issues/24131#issuecomment-1208091119
+            np.clip(w1_norm, out=w1_norm, a_min=epsilon, a_max=None)
+            w1 /= w1_norm
 
             lim = np.abs(np.abs((w1 * w).sum()) - 1)
             w = w1
