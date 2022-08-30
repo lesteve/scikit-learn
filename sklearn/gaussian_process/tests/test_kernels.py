@@ -88,7 +88,14 @@ def test_kernel_gradient(kernel):
 
     K_gradient_approx = _approx_fprime(kernel.theta, eval_kernel_for_theta, 1e-10)
 
-    assert_almost_equal(K_gradient, K_gradient_approx, 4)
+    try:
+        assert_almost_equal(K_gradient, K_gradient_approx, 4)
+    except AssertionError as exc:
+        mask = np.abs(K_gradient - K_gradient_approx) > 0.1
+        print()
+        print("K_gradient       :", K_gradient[mask])
+        print("K_gradient_approx:", K_gradient_approx[mask])
+        raise
 
 
 @pytest.mark.parametrize(
