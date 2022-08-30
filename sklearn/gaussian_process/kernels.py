@@ -1734,11 +1734,11 @@ class Matern(RBF):
             if self.nu == 0.5:
                 import pickle
 
-                pickle.dump(K, open("/tmp/K-pypy.pkl", "wb"))
-                pickle.dump(X, open("/tmp/X-pypy.pkl", "wb"))
-                pickle.dump(D, open("/tmp/D-pypy.pkl", "wb"))
+                # pickle.dump(K, open("/tmp/K-pypy.pkl", "wb"))
+                # pickle.dump(X, open("/tmp/X-pypy.pkl", "wb"))
+                # pickle.dump(D, open("/tmp/D-pypy.pkl", "wb"))
                 denominator = np.sqrt(D.sum(axis=2))[:, :, np.newaxis]
-                pickle.dump(denominator, open("/tmp/denominator-pypy.pkl", "wb"))
+                # pickle.dump(denominator, open("/tmp/denominator-pypy.pkl", "wb"))
 
                 # print(denominator[-1, -1, -1])
                 # denominator[denominator == 0.] = 1.
