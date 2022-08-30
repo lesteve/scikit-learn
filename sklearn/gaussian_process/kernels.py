@@ -1744,15 +1744,20 @@ class Matern(RBF):
                 # denominator[denominator == 0.] = 1.
                 division = np.divide(D, denominator, where=denominator != 0)
                 # division[denominator != 0] = 0.
-                K_gradient = K[..., np.newaxis] * division
+                # K_gradient = K[..., np.newaxis] * division
 
+                mask = (denominator == 0)[:, :, 0]
+                print('denominator==0:', division[mask])
                 # division[denominator != 0] = 0.
                 K_gradient = K[..., np.newaxis] * division
+                print(K_gradient.shape)
+                print(K.shape)
+                # K_gradient *= division
 
                 pickle.dump(K_gradient, open("/tmp/K_gradient-pypy.pkl", "wb"))
-                print(f"{division[-1, -1, -1]=}")
-                print(f"{division[-1, -1, -1]==0=}")
-                print(f"{K_gradient[-1, -1, -1]=}")
+                # print(f"{division[-1, -1, -1]=}")
+                # print(f"{division[-1, -1, -1]==0=}")
+                # print(f"{K_gradient[-1, -1, -1]=}")
                 # 1/0
             elif self.nu == 1.5:
                 K_gradient = 3 * D * np.exp(-np.sqrt(3 * D.sum(-1)))[..., np.newaxis]
