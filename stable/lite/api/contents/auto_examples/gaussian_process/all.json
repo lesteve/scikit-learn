@@ -1,0 +1,133 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.119417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:32.099134Z",
+      "mimetype": null,
+      "name": "plot_gpc_iris.ipynb",
+      "path": "auto_examples/gaussian_process/plot_gpc_iris.ipynb",
+      "size": 2961,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.119417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:32.227134Z",
+      "mimetype": null,
+      "name": "plot_gpc_isoprobability.ipynb",
+      "path": "auto_examples/gaussian_process/plot_gpc_isoprobability.ipynb",
+      "size": 3662,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.119417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:32.115134Z",
+      "mimetype": null,
+      "name": "plot_gpr_co2.ipynb",
+      "path": "auto_examples/gaussian_process/plot_gpr_co2.ipynb",
+      "size": 13326,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.119417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:32.067134Z",
+      "mimetype": null,
+      "name": "plot_compare_gpr_krr.ipynb",
+      "path": "auto_examples/gaussian_process/plot_compare_gpr_krr.ipynb",
+      "size": 18579,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.119417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:32.175134Z",
+      "mimetype": null,
+      "name": "plot_gpc_xor.ipynb",
+      "path": "auto_examples/gaussian_process/plot_gpc_xor.ipynb",
+      "size": 2804,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.123417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:32.155134Z",
+      "mimetype": null,
+      "name": "plot_gpr_on_structured_data.ipynb",
+      "path": "auto_examples/gaussian_process/plot_gpr_on_structured_data.ipynb",
+      "size": 7530,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.123417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:32.203134Z",
+      "mimetype": null,
+      "name": "plot_gpr_prior_posterior.ipynb",
+      "path": "auto_examples/gaussian_process/plot_gpr_prior_posterior.ipynb",
+      "size": 12068,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.119417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:32.083134Z",
+      "mimetype": null,
+      "name": "plot_gpr_noisy_targets.ipynb",
+      "path": "auto_examples/gaussian_process/plot_gpr_noisy_targets.ipynb",
+      "size": 8248,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.119417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:32.131134Z",
+      "mimetype": null,
+      "name": "plot_gpr_noisy.ipynb",
+      "path": "auto_examples/gaussian_process/plot_gpr_noisy.ipynb",
+      "size": 9895,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.119417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:32.251134Z",
+      "mimetype": null,
+      "name": "plot_gpc.ipynb",
+      "path": "auto_examples/gaussian_process/plot_gpc.ipynb",
+      "size": 4805,
+      "type": "notebook",
+      "writable": true
+    }
+  ],
+  "created": "2023-03-20T16:01:04.123417Z",
+  "format": "json",
+  "last_modified": "2023-03-20T16:01:04.123417Z",
+  "mimetype": null,
+  "name": "gaussian_process",
+  "path": "auto_examples/gaussian_process",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}

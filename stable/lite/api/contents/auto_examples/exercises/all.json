@@ -1,0 +1,61 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.115417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:34.663138Z",
+      "mimetype": null,
+      "name": "plot_cv_digits.ipynb",
+      "path": "auto_examples/exercises/plot_cv_digits.ipynb",
+      "size": 1878,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.115417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:34.675138Z",
+      "mimetype": null,
+      "name": "plot_cv_diabetes.ipynb",
+      "path": "auto_examples/exercises/plot_cv_diabetes.ipynb",
+      "size": 4174,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.115417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:34.691139Z",
+      "mimetype": null,
+      "name": "plot_digits_classification_exercise.ipynb",
+      "path": "auto_examples/exercises/plot_digits_classification_exercise.ipynb",
+      "size": 1681,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.115417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:34.703139Z",
+      "mimetype": null,
+      "name": "plot_iris_exercise.ipynb",
+      "path": "auto_examples/exercises/plot_iris_exercise.ipynb",
+      "size": 2479,
+      "type": "notebook",
+      "writable": true
+    }
+  ],
+  "created": "2023-03-20T16:01:04.115417Z",
+  "format": "json",
+  "last_modified": "2023-03-20T16:01:04.115417Z",
+  "mimetype": null,
+  "name": "exercises",
+  "path": "auto_examples/exercises",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}

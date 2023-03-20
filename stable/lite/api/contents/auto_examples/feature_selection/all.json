@@ -1,0 +1,85 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.119417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:31.843133Z",
+      "mimetype": null,
+      "name": "plot_select_from_model_diabetes.ipynb",
+      "path": "auto_examples/feature_selection/plot_select_from_model_diabetes.ipynb",
+      "size": 7212,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.119417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:31.891133Z",
+      "mimetype": null,
+      "name": "plot_rfe_with_cross_validation.ipynb",
+      "path": "auto_examples/feature_selection/plot_rfe_with_cross_validation.ipynb",
+      "size": 4224,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.115417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:31.863133Z",
+      "mimetype": null,
+      "name": "plot_feature_selection_pipeline.ipynb",
+      "path": "auto_examples/feature_selection/plot_feature_selection_pipeline.ipynb",
+      "size": 4823,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.115417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:31.831133Z",
+      "mimetype": null,
+      "name": "plot_f_test_vs_mi.ipynb",
+      "path": "auto_examples/feature_selection/plot_f_test_vs_mi.ipynb",
+      "size": 2381,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.119417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:31.875133Z",
+      "mimetype": null,
+      "name": "plot_rfe_digits.ipynb",
+      "path": "auto_examples/feature_selection/plot_rfe_digits.ipynb",
+      "size": 1691,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.115417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:31.907133Z",
+      "mimetype": null,
+      "name": "plot_feature_selection.ipynb",
+      "path": "auto_examples/feature_selection/plot_feature_selection.ipynb",
+      "size": 6022,
+      "type": "notebook",
+      "writable": true
+    }
+  ],
+  "created": "2023-03-20T16:01:04.119417Z",
+  "format": "json",
+  "last_modified": "2023-03-20T16:01:04.119417Z",
+  "mimetype": null,
+  "name": "feature_selection",
+  "path": "auto_examples/feature_selection",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}

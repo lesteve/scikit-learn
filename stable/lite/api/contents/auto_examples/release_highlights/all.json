@@ -1,0 +1,85 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.163417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:29.659129Z",
+      "mimetype": null,
+      "name": "plot_release_highlights_0_22_0.ipynb",
+      "path": "auto_examples/release_highlights/plot_release_highlights_0_22_0.ipynb",
+      "size": 13405,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.167417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:29.603129Z",
+      "mimetype": null,
+      "name": "plot_release_highlights_1_0_0.ipynb",
+      "path": "auto_examples/release_highlights/plot_release_highlights_1_0_0.ipynb",
+      "size": 11290,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.167417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:29.323129Z",
+      "mimetype": null,
+      "name": "plot_release_highlights_1_2_0.ipynb",
+      "path": "auto_examples/release_highlights/plot_release_highlights_1_2_0.ipynb",
+      "size": 8790,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.167417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:29.339129Z",
+      "mimetype": null,
+      "name": "plot_release_highlights_1_1_0.ipynb",
+      "path": "auto_examples/release_highlights/plot_release_highlights_1_1_0.ipynb",
+      "size": 10882,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.167417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:29.619129Z",
+      "mimetype": null,
+      "name": "plot_release_highlights_0_24_0.ipynb",
+      "path": "auto_examples/release_highlights/plot_release_highlights_0_24_0.ipynb",
+      "size": 13105,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.163417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:29.639129Z",
+      "mimetype": null,
+      "name": "plot_release_highlights_0_23_0.ipynb",
+      "path": "auto_examples/release_highlights/plot_release_highlights_0_23_0.ipynb",
+      "size": 9084,
+      "type": "notebook",
+      "writable": true
+    }
+  ],
+  "created": "2023-03-20T16:01:04.167417Z",
+  "format": "json",
+  "last_modified": "2023-03-20T16:01:04.167417Z",
+  "mimetype": null,
+  "name": "release_highlights",
+  "path": "auto_examples/release_highlights",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}

@@ -1,0 +1,73 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.087417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:29.823130Z",
+      "mimetype": null,
+      "name": "plot_lda_qda.ipynb",
+      "path": "auto_examples/classification/plot_lda_qda.ipynb",
+      "size": 7173,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.083417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:29.807130Z",
+      "mimetype": null,
+      "name": "plot_classifier_comparison.ipynb",
+      "path": "auto_examples/classification/plot_classifier_comparison.ipynb",
+      "size": 5800,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.087417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:29.839130Z",
+      "mimetype": null,
+      "name": "plot_lda.ipynb",
+      "path": "auto_examples/classification/plot_lda.ipynb",
+      "size": 3829,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.083417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:29.867130Z",
+      "mimetype": null,
+      "name": "plot_digits_classification.ipynb",
+      "path": "auto_examples/classification/plot_digits_classification.ipynb",
+      "size": 6541,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.083417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:29.855130Z",
+      "mimetype": null,
+      "name": "plot_classification_probability.ipynb",
+      "path": "auto_examples/classification/plot_classification_probability.ipynb",
+      "size": 3948,
+      "type": "notebook",
+      "writable": true
+    }
+  ],
+  "created": "2023-03-20T16:01:04.087417Z",
+  "format": "json",
+  "last_modified": "2023-03-20T16:01:04.087417Z",
+  "mimetype": null,
+  "name": "classification",
+  "path": "auto_examples/classification",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}

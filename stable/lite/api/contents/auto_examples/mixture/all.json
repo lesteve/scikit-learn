@@ -1,0 +1,97 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.147417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:31.995134Z",
+      "mimetype": null,
+      "name": "plot_gmm.ipynb",
+      "path": "auto_examples/mixture/plot_gmm.ipynb",
+      "size": 4016,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.151417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:31.947134Z",
+      "mimetype": null,
+      "name": "plot_gmm_pdf.ipynb",
+      "path": "auto_examples/mixture/plot_gmm_pdf.ipynb",
+      "size": 2264,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.151417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:31.963134Z",
+      "mimetype": null,
+      "name": "plot_gmm_init.ipynb",
+      "path": "auto_examples/mixture/plot_gmm_init.ipynb",
+      "size": 4551,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.147417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:31.979134Z",
+      "mimetype": null,
+      "name": "plot_gmm_covariances.ipynb",
+      "path": "auto_examples/mixture/plot_gmm_covariances.ipynb",
+      "size": 5581,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.151417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:32.031134Z",
+      "mimetype": null,
+      "name": "plot_gmm_sin.ipynb",
+      "path": "auto_examples/mixture/plot_gmm_sin.ipynb",
+      "size": 7019,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.147417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:31.931134Z",
+      "mimetype": null,
+      "name": "plot_concentration_prior.ipynb",
+      "path": "auto_examples/mixture/plot_concentration_prior.ipynb",
+      "size": 6729,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-03-20T16:01:04.151417Z",
+      "format": null,
+      "last_modified": "2023-03-20T15:58:32.011134Z",
+      "mimetype": null,
+      "name": "plot_gmm_selection.ipynb",
+      "path": "auto_examples/mixture/plot_gmm_selection.ipynb",
+      "size": 7655,
+      "type": "notebook",
+      "writable": true
+    }
+  ],
+  "created": "2023-03-20T16:01:04.151417Z",
+  "format": "json",
+  "last_modified": "2023-03-20T16:01:04.151417Z",
+  "mimetype": null,
+  "name": "mixture",
+  "path": "auto_examples/mixture",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}
