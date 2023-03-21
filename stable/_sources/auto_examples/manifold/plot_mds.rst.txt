@@ -149,7 +149,7 @@ shifted to avoid overlapping.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/manifold/plot_mds.ipynb
+        :target: /lite/lab/?path=auto_examples/manifold/plot_mds.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

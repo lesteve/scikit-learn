@@ -108,7 +108,7 @@ incremental approaches.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/decomposition/plot_incremental_pca.ipynb
+        :target: /lite/lab/?path=auto_examples/decomposition/plot_incremental_pca.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

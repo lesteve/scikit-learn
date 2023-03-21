@@ -176,7 +176,7 @@ hyperparameters used in the first figure by black dots.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/gaussian_process/plot_gpc.ipynb
+        :target: /lite/lab/?path=auto_examples/gaussian_process/plot_gpc.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

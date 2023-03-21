@@ -120,7 +120,7 @@ This exercise is used in the :ref:`using_kernels_tut` part of the
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/exercises/plot_iris_exercise.ipynb
+        :target: /lite/lab/?path=auto_examples/exercises/plot_iris_exercise.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

@@ -743,7 +743,7 @@ this time in 3 dimensions.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/inspection/plot_partial_dependence.ipynb
+        :target: /lite/lab/?path=auto_examples/inspection/plot_partial_dependence.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

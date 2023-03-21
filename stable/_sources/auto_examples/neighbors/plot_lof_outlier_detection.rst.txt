@@ -119,7 +119,7 @@ n_neighbors=20 appears to work well in general.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/neighbors/plot_lof_outlier_detection.ipynb
+        :target: /lite/lab/?path=auto_examples/neighbors/plot_lof_outlier_detection.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

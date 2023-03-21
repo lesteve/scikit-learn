@@ -142,7 +142,7 @@ Look at the results
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/svm/plot_svm_regression.ipynb
+        :target: /lite/lab/?path=auto_examples/svm/plot_svm_regression.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

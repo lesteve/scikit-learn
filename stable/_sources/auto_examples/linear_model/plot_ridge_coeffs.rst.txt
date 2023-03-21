@@ -135,7 +135,7 @@ it is possible to extract the exact coefficients.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/linear_model/plot_ridge_coeffs.ipynb
+        :target: /lite/lab/?path=auto_examples/linear_model/plot_ridge_coeffs.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

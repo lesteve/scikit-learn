@@ -210,7 +210,7 @@ tends to divide natural clusters into unnecessary sub-components.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/mixture/plot_concentration_prior.ipynb
+        :target: /lite/lab/?path=auto_examples/mixture/plot_concentration_prior.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

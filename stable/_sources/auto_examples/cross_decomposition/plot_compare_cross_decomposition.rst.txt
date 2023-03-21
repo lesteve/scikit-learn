@@ -253,7 +253,7 @@ CCA (PLS mode B with symmetric deflation)
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/cross_decomposition/plot_compare_cross_decomposition.ipynb
+        :target: /lite/lab/?path=auto_examples/cross_decomposition/plot_compare_cross_decomposition.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

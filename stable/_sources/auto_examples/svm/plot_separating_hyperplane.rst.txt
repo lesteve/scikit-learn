@@ -94,7 +94,7 @@ linear kernel.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/svm/plot_separating_hyperplane.ipynb
+        :target: /lite/lab/?path=auto_examples/svm/plot_separating_hyperplane.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

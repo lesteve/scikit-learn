@@ -102,7 +102,7 @@ plot the decision surface and the support vectors.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/svm/plot_custom_kernel.ipynb
+        :target: /lite/lab/?path=auto_examples/svm/plot_custom_kernel.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

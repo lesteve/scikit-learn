@@ -230,7 +230,7 @@ Compare fit times with and without early stopping
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/ensemble/plot_gradient_boosting_early_stopping.ipynb
+        :target: /lite/lab/?path=auto_examples/ensemble/plot_gradient_boosting_early_stopping.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

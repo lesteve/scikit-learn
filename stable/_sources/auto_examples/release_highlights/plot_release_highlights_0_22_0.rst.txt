@@ -390,7 +390,7 @@ Read more in the :ref:`User Guide <roc_metrics>`.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/release_highlights/plot_release_highlights_0_22_0.ipynb
+        :target: /lite/lab/?path=auto_examples/release_highlights/plot_release_highlights_0_22_0.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

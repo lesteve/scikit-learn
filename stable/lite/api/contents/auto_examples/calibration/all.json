@@ -2,9 +2,9 @@
   "content": [
     {
       "content": null,
-      "created": "2023-03-20T16:01:04.083417Z",
+      "created": "2023-03-21T13:22:05.497506Z",
       "format": null,
-      "last_modified": "2023-03-20T15:58:29.771130Z",
+      "last_modified": "2023-03-21T13:19:53.013341Z",
       "mimetype": null,
       "name": "plot_calibration_multiclass.ipynb",
       "path": "auto_examples/calibration/plot_calibration_multiclass.ipynb",
@@ -14,9 +14,9 @@
     },
     {
       "content": null,
-      "created": "2023-03-20T16:01:04.083417Z",
+      "created": "2023-03-21T13:22:05.497506Z",
       "format": null,
-      "last_modified": "2023-03-20T15:58:29.731129Z",
+      "last_modified": "2023-03-21T13:19:52.977341Z",
       "mimetype": null,
       "name": "plot_compare_calibration.ipynb",
       "path": "auto_examples/calibration/plot_compare_calibration.ipynb",
@@ -26,9 +26,9 @@
     },
     {
       "content": null,
-      "created": "2023-03-20T16:01:04.083417Z",
+      "created": "2023-03-21T13:22:05.497506Z",
       "format": null,
-      "last_modified": "2023-03-20T15:58:29.751129Z",
+      "last_modified": "2023-03-21T13:19:52.993341Z",
       "mimetype": null,
       "name": "plot_calibration_curve.ipynb",
       "path": "auto_examples/calibration/plot_calibration_curve.ipynb",
@@ -38,9 +38,9 @@
     },
     {
       "content": null,
-      "created": "2023-03-20T16:01:04.083417Z",
+      "created": "2023-03-21T13:22:05.497506Z",
       "format": null,
-      "last_modified": "2023-03-20T15:58:29.787130Z",
+      "last_modified": "2023-03-21T13:19:53.029341Z",
       "mimetype": null,
       "name": "plot_calibration.ipynb",
       "path": "auto_examples/calibration/plot_calibration.ipynb",
@@ -49,9 +49,9 @@
       "writable": true
     }
   ],
-  "created": "2023-03-20T16:01:04.083417Z",
+  "created": "2023-03-21T13:22:05.497506Z",
   "format": "json",
-  "last_modified": "2023-03-20T16:01:04.083417Z",
+  "last_modified": "2023-03-21T13:22:05.497506Z",
   "mimetype": null,
   "name": "calibration",
   "path": "auto_examples/calibration",

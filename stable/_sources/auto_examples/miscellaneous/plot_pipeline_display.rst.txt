@@ -277,7 +277,7 @@ Displaying a Grid Search over a Pipeline with a Classifier
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/miscellaneous/plot_pipeline_display.ipynb
+        :target: /lite/lab/?path=auto_examples/miscellaneous/plot_pipeline_display.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

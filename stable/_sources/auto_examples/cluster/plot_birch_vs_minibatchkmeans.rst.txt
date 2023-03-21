@@ -155,7 +155,7 @@ step before the final (global) clustering step that further reduces these
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/cluster/plot_birch_vs_minibatchkmeans.ipynb
+        :target: /lite/lab/?path=auto_examples/cluster/plot_birch_vs_minibatchkmeans.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

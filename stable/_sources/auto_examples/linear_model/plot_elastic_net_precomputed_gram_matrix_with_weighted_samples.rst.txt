@@ -112,7 +112,7 @@ matrix, the preprocessing code will incorrectly rescale it a second time.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/linear_model/plot_elastic_net_precomputed_gram_matrix_with_weighted_samples.ipynb
+        :target: /lite/lab/?path=auto_examples/linear_model/plot_elastic_net_precomputed_gram_matrix_with_weighted_samples.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

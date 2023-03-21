@@ -281,7 +281,7 @@ pairwise distances.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/miscellaneous/plot_johnson_lindenstrauss_bound.ipynb
+        :target: /lite/lab/?path=auto_examples/miscellaneous/plot_johnson_lindenstrauss_bound.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

@@ -110,7 +110,7 @@ of the data.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/neighbors/plot_digits_kde_sampling.ipynb
+        :target: /lite/lab/?path=auto_examples/neighbors/plot_digits_kde_sampling.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

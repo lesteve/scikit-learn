@@ -105,7 +105,7 @@ feature agglomeration.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/cluster/plot_digits_agglomeration.ipynb
+        :target: /lite/lab/?path=auto_examples/cluster/plot_digits_agglomeration.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

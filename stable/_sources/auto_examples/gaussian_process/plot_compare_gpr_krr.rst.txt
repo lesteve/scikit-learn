@@ -549,7 +549,7 @@ also increases.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/gaussian_process/plot_compare_gpr_krr.ipynb
+        :target: /lite/lab/?path=auto_examples/gaussian_process/plot_compare_gpr_krr.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

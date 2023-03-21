@@ -219,7 +219,7 @@ achieve a better V-measure than clusters found by MiniBatchKMeans.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/bicluster/plot_bicluster_newsgroups.ipynb
+        :target: /lite/lab/?path=auto_examples/bicluster/plot_bicluster_newsgroups.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

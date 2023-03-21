@@ -108,7 +108,7 @@ It will plot the decision boundaries for each class.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/neighbors/plot_classification.ipynb
+        :target: /lite/lab/?path=auto_examples/neighbors/plot_classification.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

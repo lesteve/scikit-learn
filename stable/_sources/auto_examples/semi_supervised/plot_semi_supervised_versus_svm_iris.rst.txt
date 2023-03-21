@@ -136,7 +136,7 @@ identical to training the SVC on 100% of the data.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/semi_supervised/plot_semi_supervised_versus_svm_iris.ipynb
+        :target: /lite/lab/?path=auto_examples/semi_supervised/plot_semi_supervised_versus_svm_iris.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

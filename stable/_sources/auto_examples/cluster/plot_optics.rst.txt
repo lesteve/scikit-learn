@@ -153,7 +153,7 @@ thresholds in DBSCAN.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/cluster/plot_optics.ipynb
+        :target: /lite/lab/?path=auto_examples/cluster/plot_optics.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

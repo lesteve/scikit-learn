@@ -2,9 +2,9 @@
   "content": [
     {
       "content": null,
-      "created": "2023-03-20T16:01:04.087417Z",
+      "created": "2023-03-21T13:22:05.501507Z",
       "format": null,
-      "last_modified": "2023-03-20T15:58:29.823130Z",
+      "last_modified": "2023-03-21T13:19:53.069341Z",
       "mimetype": null,
       "name": "plot_lda_qda.ipynb",
       "path": "auto_examples/classification/plot_lda_qda.ipynb",
@@ -14,9 +14,9 @@
     },
     {
       "content": null,
-      "created": "2023-03-20T16:01:04.083417Z",
+      "created": "2023-03-21T13:22:05.497506Z",
       "format": null,
-      "last_modified": "2023-03-20T15:58:29.807130Z",
+      "last_modified": "2023-03-21T13:19:53.053341Z",
       "mimetype": null,
       "name": "plot_classifier_comparison.ipynb",
       "path": "auto_examples/classification/plot_classifier_comparison.ipynb",
@@ -26,9 +26,9 @@
     },
     {
       "content": null,
-      "created": "2023-03-20T16:01:04.087417Z",
+      "created": "2023-03-21T13:22:05.501507Z",
       "format": null,
-      "last_modified": "2023-03-20T15:58:29.839130Z",
+      "last_modified": "2023-03-21T13:19:53.085341Z",
       "mimetype": null,
       "name": "plot_lda.ipynb",
       "path": "auto_examples/classification/plot_lda.ipynb",
@@ -38,9 +38,9 @@
     },
     {
       "content": null,
-      "created": "2023-03-20T16:01:04.083417Z",
+      "created": "2023-03-21T13:22:05.501507Z",
       "format": null,
-      "last_modified": "2023-03-20T15:58:29.867130Z",
+      "last_modified": "2023-03-21T13:19:53.113341Z",
       "mimetype": null,
       "name": "plot_digits_classification.ipynb",
       "path": "auto_examples/classification/plot_digits_classification.ipynb",
@@ -50,9 +50,9 @@
     },
     {
       "content": null,
-      "created": "2023-03-20T16:01:04.083417Z",
+      "created": "2023-03-21T13:22:05.497506Z",
       "format": null,
-      "last_modified": "2023-03-20T15:58:29.855130Z",
+      "last_modified": "2023-03-21T13:19:53.097341Z",
       "mimetype": null,
       "name": "plot_classification_probability.ipynb",
       "path": "auto_examples/classification/plot_classification_probability.ipynb",
@@ -61,9 +61,9 @@
       "writable": true
     }
   ],
-  "created": "2023-03-20T16:01:04.087417Z",
+  "created": "2023-03-21T13:22:05.501507Z",
   "format": "json",
-  "last_modified": "2023-03-20T16:01:04.087417Z",
+  "last_modified": "2023-03-21T13:22:05.501507Z",
   "mimetype": null,
   "name": "classification",
   "path": "auto_examples/classification",

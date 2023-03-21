@@ -160,7 +160,7 @@ features by the first step.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/feature_selection/plot_feature_selection_pipeline.ipynb
+        :target: /lite/lab/?path=auto_examples/feature_selection/plot_feature_selection_pipeline.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

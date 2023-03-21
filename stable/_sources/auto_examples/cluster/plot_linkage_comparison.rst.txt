@@ -235,7 +235,7 @@ Run the clustering and plot
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/cluster/plot_linkage_comparison.ipynb
+        :target: /lite/lab/?path=auto_examples/cluster/plot_linkage_comparison.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

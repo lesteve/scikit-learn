@@ -321,7 +321,7 @@ of clusters.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/cluster/plot_adjusted_for_chance_measures.ipynb
+        :target: /lite/lab/?path=auto_examples/cluster/plot_adjusted_for_chance_measures.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

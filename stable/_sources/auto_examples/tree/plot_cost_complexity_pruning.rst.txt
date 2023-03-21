@@ -188,7 +188,7 @@ In this example, setting ``ccp_alpha=0.015`` maximizes the testing accuracy.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/tree/plot_cost_complexity_pruning.ipynb
+        :target: /lite/lab/?path=auto_examples/tree/plot_cost_complexity_pruning.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

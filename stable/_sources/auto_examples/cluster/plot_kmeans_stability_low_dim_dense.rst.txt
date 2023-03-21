@@ -180,7 +180,7 @@ clusters widely spaced.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/cluster/plot_kmeans_stability_low_dim_dense.ipynb
+        :target: /lite/lab/?path=auto_examples/cluster/plot_kmeans_stability_low_dim_dense.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

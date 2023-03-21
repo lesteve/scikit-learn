@@ -194,7 +194,7 @@ frequent class.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/model_selection/plot_roc_crossval.ipynb
+        :target: /lite/lab/?path=auto_examples/model_selection/plot_roc_crossval.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

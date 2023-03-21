@@ -110,7 +110,7 @@ LDA, in contrast to PCA, is a supervised method, using known class labels.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/decomposition/plot_pca_vs_lda.ipynb
+        :target: /lite/lab/?path=auto_examples/decomposition/plot_pca_vs_lda.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

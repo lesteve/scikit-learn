@@ -187,7 +187,7 @@ Note that those results can be highly dependent on the value of
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/neural_networks/plot_mlp_training_curves.ipynb
+        :target: /lite/lab/?path=auto_examples/neural_networks/plot_mlp_training_curves.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

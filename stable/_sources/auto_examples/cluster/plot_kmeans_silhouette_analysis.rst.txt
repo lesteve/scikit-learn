@@ -205,7 +205,7 @@ verified from the labelled scatter plot on the right.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/cluster/plot_kmeans_silhouette_analysis.ipynb
+        :target: /lite/lab/?path=auto_examples/cluster/plot_kmeans_silhouette_analysis.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

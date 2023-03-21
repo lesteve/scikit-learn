@@ -356,7 +356,7 @@ uncalibrated probability. This illustrates the learned calibration map:
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/calibration/plot_calibration_multiclass.ipynb
+        :target: /lite/lab/?path=auto_examples/calibration/plot_calibration_multiclass.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

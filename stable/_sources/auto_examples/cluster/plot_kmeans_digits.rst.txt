@@ -269,7 +269,7 @@ we can use :class:`~sklearn.decomposition.PCA` to project into a
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/cluster/plot_kmeans_digits.ipynb
+        :target: /lite/lab/?path=auto_examples/cluster/plot_kmeans_digits.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

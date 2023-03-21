@@ -117,7 +117,7 @@ deformation of the decision boundary very visible.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/svm/plot_weighted_samples.ipynb
+        :target: /lite/lab/?path=auto_examples/svm/plot_weighted_samples.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

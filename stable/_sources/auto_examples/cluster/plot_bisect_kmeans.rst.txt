@@ -111,7 +111,7 @@ present for regular K-Means.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/cluster/plot_bisect_kmeans.ipynb
+        :target: /lite/lab/?path=auto_examples/cluster/plot_bisect_kmeans.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

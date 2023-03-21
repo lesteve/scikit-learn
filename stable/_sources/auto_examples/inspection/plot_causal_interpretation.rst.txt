@@ -278,7 +278,7 @@ estimations.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/inspection/plot_causal_interpretation.ipynb
+        :target: /lite/lab/?path=auto_examples/inspection/plot_causal_interpretation.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

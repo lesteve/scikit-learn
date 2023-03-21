@@ -731,7 +731,7 @@ Main takeaways
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/linear_model/plot_poisson_regression_non_normal_loss.ipynb
+        :target: /lite/lab/?path=auto_examples/linear_model/plot_poisson_regression_non_normal_loss.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

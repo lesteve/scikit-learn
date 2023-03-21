@@ -175,7 +175,7 @@ extends clustering by inducing a classifier from the cluster labels.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/cluster/plot_inductive_clustering.ipynb
+        :target: /lite/lab/?path=auto_examples/cluster/plot_inductive_clustering.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

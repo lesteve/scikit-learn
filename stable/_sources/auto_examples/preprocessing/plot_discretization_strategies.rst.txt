@@ -150,7 +150,7 @@ The plot shows the regions where the discretized encoding is constant.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/preprocessing/plot_discretization_strategies.ipynb
+        :target: /lite/lab/?path=auto_examples/preprocessing/plot_discretization_strategies.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

@@ -145,7 +145,7 @@ Run factor analysis with Varimax rotation
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/decomposition/plot_varimax_fa.ipynb
+        :target: /lite/lab/?path=auto_examples/decomposition/plot_varimax_fa.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

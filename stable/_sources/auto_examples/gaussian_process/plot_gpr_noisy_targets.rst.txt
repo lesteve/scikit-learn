@@ -255,7 +255,7 @@ variable.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/gaussian_process/plot_gpr_noisy_targets.ipynb
+        :target: /lite/lab/?path=auto_examples/gaussian_process/plot_gpr_noisy_targets.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

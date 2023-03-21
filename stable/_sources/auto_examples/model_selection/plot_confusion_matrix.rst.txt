@@ -114,7 +114,7 @@ using :ref:`grid_search`.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/model_selection/plot_confusion_matrix.ipynb
+        :target: /lite/lab/?path=auto_examples/model_selection/plot_confusion_matrix.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

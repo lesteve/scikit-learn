@@ -155,7 +155,7 @@ prediction made by :class:`~ensemble.VotingRegressor`.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/ensemble/plot_voting_regressor.ipynb
+        :target: /lite/lab/?path=auto_examples/ensemble/plot_voting_regressor.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

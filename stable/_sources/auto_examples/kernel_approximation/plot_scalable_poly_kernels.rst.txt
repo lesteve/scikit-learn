@@ -349,7 +349,7 @@ https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary.html
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/kernel_approximation/plot_scalable_poly_kernels.ipynb
+        :target: /lite/lab/?path=auto_examples/kernel_approximation/plot_scalable_poly_kernels.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

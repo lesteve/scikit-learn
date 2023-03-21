@@ -139,7 +139,7 @@ regularization properties of the inference algorithm.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/mixture/plot_gmm.ipynb
+        :target: /lite/lab/?path=auto_examples/mixture/plot_gmm.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

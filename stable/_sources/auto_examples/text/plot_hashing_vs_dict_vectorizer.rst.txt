@@ -539,7 +539,7 @@ compiles a regular expression once and then reuses it for all the documents.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/text/plot_hashing_vs_dict_vectorizer.ipynb
+        :target: /lite/lab/?path=auto_examples/text/plot_hashing_vs_dict_vectorizer.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

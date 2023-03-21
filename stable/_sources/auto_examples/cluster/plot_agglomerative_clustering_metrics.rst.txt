@@ -192,7 +192,7 @@ thus the clustering puts them in the same cluster.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/cluster/plot_agglomerative_clustering_metrics.ipynb
+        :target: /lite/lab/?path=auto_examples/cluster/plot_agglomerative_clustering_metrics.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

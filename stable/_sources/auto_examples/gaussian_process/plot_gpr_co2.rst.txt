@@ -366,7 +366,7 @@ indicating that the data can be very well explained by the model.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/gaussian_process/plot_gpr_co2.ipynb
+        :target: /lite/lab/?path=auto_examples/gaussian_process/plot_gpr_co2.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

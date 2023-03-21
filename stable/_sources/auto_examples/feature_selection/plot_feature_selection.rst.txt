@@ -208,7 +208,7 @@ and will thus improve classification.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/feature_selection/plot_feature_selection.ipynb
+        :target: /lite/lab/?path=auto_examples/feature_selection/plot_feature_selection.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

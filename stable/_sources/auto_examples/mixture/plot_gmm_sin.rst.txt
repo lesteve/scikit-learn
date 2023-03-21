@@ -233,7 +233,7 @@ number of Gaussian components instead of a continuous noisy sine curve.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/mixture/plot_gmm_sin.ipynb
+        :target: /lite/lab/?path=auto_examples/mixture/plot_gmm_sin.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

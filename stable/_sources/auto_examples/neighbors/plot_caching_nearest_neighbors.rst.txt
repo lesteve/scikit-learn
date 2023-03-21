@@ -115,7 +115,7 @@ larger, or when the grid of parameter to search is large.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/neighbors/plot_caching_nearest_neighbors.ipynb
+        :target: /lite/lab/?path=auto_examples/neighbors/plot_caching_nearest_neighbors.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

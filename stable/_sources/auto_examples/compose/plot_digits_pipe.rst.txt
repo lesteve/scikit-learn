@@ -127,7 +127,7 @@ We use a GridSearchCV to set the dimensionality of the PCA
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/compose/plot_digits_pipe.ipynb
+        :target: /lite/lab/?path=auto_examples/compose/plot_digits_pipe.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

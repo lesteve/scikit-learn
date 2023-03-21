@@ -80,7 +80,7 @@ This exercise is used in the :ref:`clf_tut` part of the
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/exercises/plot_digits_classification_exercise.ipynb
+        :target: /lite/lab/?path=auto_examples/exercises/plot_digits_classification_exercise.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

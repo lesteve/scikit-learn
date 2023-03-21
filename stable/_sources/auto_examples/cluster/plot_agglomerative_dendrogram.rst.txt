@@ -98,7 +98,7 @@ using AgglomerativeClustering and the dendrogram method available in scipy.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/cluster/plot_agglomerative_dendrogram.ipynb
+        :target: /lite/lab/?path=auto_examples/cluster/plot_agglomerative_dendrogram.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

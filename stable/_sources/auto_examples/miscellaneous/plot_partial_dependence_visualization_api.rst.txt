@@ -231,7 +231,7 @@ plot function.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/miscellaneous/plot_partial_dependence_visualization_api.ipynb
+        :target: /lite/lab/?path=auto_examples/miscellaneous/plot_partial_dependence_visualization_api.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

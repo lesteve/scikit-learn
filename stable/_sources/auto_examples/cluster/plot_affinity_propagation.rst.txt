@@ -141,7 +141,7 @@ Plot result
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/cluster/plot_affinity_propagation.ipynb
+        :target: /lite/lab/?path=auto_examples/cluster/plot_affinity_propagation.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

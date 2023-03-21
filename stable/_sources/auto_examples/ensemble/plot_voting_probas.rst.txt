@@ -141,7 +141,7 @@ example dataset.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/ensemble/plot_voting_probas.ipynb
+        :target: /lite/lab/?path=auto_examples/ensemble/plot_voting_probas.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

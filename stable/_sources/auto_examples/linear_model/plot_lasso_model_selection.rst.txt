@@ -371,7 +371,7 @@ strategy: it works in different settings.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/linear_model/plot_lasso_model_selection.ipynb
+        :target: /lite/lab/?path=auto_examples/linear_model/plot_lasso_model_selection.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

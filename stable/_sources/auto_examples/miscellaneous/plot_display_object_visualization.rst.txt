@@ -167,7 +167,7 @@ Combining the display objects into a single plot
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/miscellaneous/plot_display_object_visualization.ipynb
+        :target: /lite/lab/?path=auto_examples/miscellaneous/plot_display_object_visualization.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

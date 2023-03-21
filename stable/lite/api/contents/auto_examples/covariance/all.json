@@ -2,9 +2,9 @@
   "content": [
     {
       "content": null,
-      "created": "2023-03-20T16:01:04.099417Z",
+      "created": "2023-03-21T13:22:05.513506Z",
       "format": null,
-      "last_modified": "2023-03-20T15:58:30.643131Z",
+      "last_modified": "2023-03-21T13:19:53.713341Z",
       "mimetype": null,
       "name": "plot_mahalanobis_distances.ipynb",
       "path": "auto_examples/covariance/plot_mahalanobis_distances.ipynb",
@@ -14,9 +14,9 @@
     },
     {
       "content": null,
-      "created": "2023-03-20T16:01:04.099417Z",
+      "created": "2023-03-21T13:22:05.513506Z",
       "format": null,
-      "last_modified": "2023-03-20T15:58:30.659131Z",
+      "last_modified": "2023-03-21T13:19:53.729342Z",
       "mimetype": null,
       "name": "plot_robust_vs_empirical_covariance.ipynb",
       "path": "auto_examples/covariance/plot_robust_vs_empirical_covariance.ipynb",
@@ -26,9 +26,9 @@
     },
     {
       "content": null,
-      "created": "2023-03-20T16:01:04.099417Z",
+      "created": "2023-03-21T13:22:05.513506Z",
       "format": null,
-      "last_modified": "2023-03-20T15:58:30.627131Z",
+      "last_modified": "2023-03-21T13:19:53.697341Z",
       "mimetype": null,
       "name": "plot_lw_vs_oas.ipynb",
       "path": "auto_examples/covariance/plot_lw_vs_oas.ipynb",
@@ -38,9 +38,9 @@
     },
     {
       "content": null,
-      "created": "2023-03-20T16:01:04.099417Z",
+      "created": "2023-03-21T13:22:05.513506Z",
       "format": null,
-      "last_modified": "2023-03-20T15:58:30.707131Z",
+      "last_modified": "2023-03-21T13:19:53.761342Z",
       "mimetype": null,
       "name": "plot_sparse_cov.ipynb",
       "path": "auto_examples/covariance/plot_sparse_cov.ipynb",
@@ -50,9 +50,9 @@
     },
     {
       "content": null,
-      "created": "2023-03-20T16:01:04.099417Z",
+      "created": "2023-03-21T13:22:05.513506Z",
       "format": null,
-      "last_modified": "2023-03-20T15:58:30.679131Z",
+      "last_modified": "2023-03-21T13:19:53.745342Z",
       "mimetype": null,
       "name": "plot_covariance_estimation.ipynb",
       "path": "auto_examples/covariance/plot_covariance_estimation.ipynb",
@@ -61,9 +61,9 @@
       "writable": true
     }
   ],
-  "created": "2023-03-20T16:01:04.099417Z",
+  "created": "2023-03-21T13:22:05.513506Z",
   "format": "json",
-  "last_modified": "2023-03-20T16:01:04.099417Z",
+  "last_modified": "2023-03-21T13:22:05.513506Z",
   "mimetype": null,
   "name": "covariance",
   "path": "auto_examples/covariance",

@@ -516,7 +516,7 @@ case if some original features had a mix of positive and negative values.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/preprocessing/plot_all_scaling.ipynb
+        :target: /lite/lab/?path=auto_examples/preprocessing/plot_all_scaling.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

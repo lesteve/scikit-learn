@@ -266,7 +266,7 @@ tensorflow to implement such models.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/applications/plot_face_recognition.ipynb
+        :target: /lite/lab/?path=auto_examples/applications/plot_face_recognition.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

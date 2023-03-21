@@ -138,7 +138,7 @@ data-points are not linearly separable.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/svm/plot_svm_kernels.ipynb
+        :target: /lite/lab/?path=auto_examples/svm/plot_svm_kernels.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

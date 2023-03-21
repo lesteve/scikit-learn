@@ -220,7 +220,7 @@ Attempt to remove the temporary cachedir, but don't worry if it fails
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/cluster/plot_feature_agglomeration_vs_univariate_selection.ipynb
+        :target: /lite/lab/?path=auto_examples/cluster/plot_feature_agglomeration_vs_univariate_selection.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

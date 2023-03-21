@@ -390,7 +390,7 @@ factor of 5 for the overall pipeline.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/neighbors/approximate_nearest_neighbors.ipynb
+        :target: /lite/lab/?path=auto_examples/neighbors/approximate_nearest_neighbors.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

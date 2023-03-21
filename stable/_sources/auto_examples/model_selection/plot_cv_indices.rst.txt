@@ -294,7 +294,7 @@ Note how some use the group/class information while others do not.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/model_selection/plot_cv_indices.ipynb
+        :target: /lite/lab/?path=auto_examples/model_selection/plot_cv_indices.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

@@ -158,7 +158,7 @@ with a decision score above some value.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/ensemble/plot_adaboost_twoclass.ipynb
+        :target: /lite/lab/?path=auto_examples/ensemble/plot_adaboost_twoclass.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

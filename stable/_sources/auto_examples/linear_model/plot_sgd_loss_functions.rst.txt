@@ -95,7 +95,7 @@ A plot that compares the various convex loss functions supported by
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/linear_model/plot_sgd_loss_functions.ipynb
+        :target: /lite/lab/?path=auto_examples/linear_model/plot_sgd_loss_functions.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

@@ -107,7 +107,7 @@ information on this dataset.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/decomposition/plot_pca_iris.ipynb
+        :target: /lite/lab/?path=auto_examples/decomposition/plot_pca_iris.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

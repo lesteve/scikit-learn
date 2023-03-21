@@ -315,7 +315,7 @@ hierarchical structure to the clustering.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/release_highlights/plot_release_highlights_1_1_0.ipynb
+        :target: /lite/lab/?path=auto_examples/release_highlights/plot_release_highlights_1_1_0.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

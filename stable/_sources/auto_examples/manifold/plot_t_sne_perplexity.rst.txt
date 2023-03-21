@@ -191,7 +191,7 @@ those effects.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/manifold/plot_t_sne_perplexity.ipynb
+        :target: /lite/lab/?path=auto_examples/manifold/plot_t_sne_perplexity.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

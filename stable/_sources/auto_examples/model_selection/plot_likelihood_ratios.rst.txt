@@ -462,7 +462,7 @@ of those computed with on balanced classes.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/model_selection/plot_likelihood_ratios.ipynb
+        :target: /lite/lab/?path=auto_examples/model_selection/plot_likelihood_ratios.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

@@ -108,7 +108,7 @@ stationary kernels often obtain better results.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: ../lite/lab/?path=auto_examples/gaussian_process/plot_gpc_xor.ipynb
+        :target: /lite/lab/?path=auto_examples/gaussian_process/plot_gpc_xor.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 
