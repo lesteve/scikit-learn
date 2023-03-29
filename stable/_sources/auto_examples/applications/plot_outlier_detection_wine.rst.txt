@@ -209,7 +209,7 @@ the data scatter matrix and the risk of over-fitting the data.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/applications/plot_outlier_detection_wine.ipynb
+        :target: ../../lite/lab/?path=auto_examples/applications/plot_outlier_detection_wine.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

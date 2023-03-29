@@ -116,7 +116,7 @@ is good but the validation score is poor.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/model_selection/plot_validation_curve.ipynb
+        :target: ../../lite/lab/?path=auto_examples/model_selection/plot_validation_curve.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

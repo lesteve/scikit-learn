@@ -356,7 +356,7 @@ to improve the understanding of machine learning practices:
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/release_highlights/plot_release_highlights_0_24_0.ipynb
+        :target: ../../lite/lab/?path=auto_examples/release_highlights/plot_release_highlights_0_24_0.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

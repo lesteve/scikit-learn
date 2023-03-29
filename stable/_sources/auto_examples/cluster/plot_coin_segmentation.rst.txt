@@ -161,7 +161,7 @@ Compute and visualize the resulting regions
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/cluster/plot_coin_segmentation.ipynb
+        :target: ../../lite/lab/?path=auto_examples/cluster/plot_coin_segmentation.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

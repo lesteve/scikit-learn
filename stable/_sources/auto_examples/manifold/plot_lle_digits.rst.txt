@@ -272,7 +272,7 @@ Finally, we can plot the resulting projection given by each method.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/manifold/plot_lle_digits.ipynb
+        :target: ../../lite/lab/?path=auto_examples/manifold/plot_lle_digits.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

@@ -201,7 +201,7 @@ is held out with the validation stopping criterion.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/linear_model/plot_sgd_early_stopping.ipynb
+        :target: ../../lite/lab/?path=auto_examples/linear_model/plot_sgd_early_stopping.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

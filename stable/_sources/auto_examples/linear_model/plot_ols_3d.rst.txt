@@ -151,7 +151,7 @@ Finally we plot the figure from three different views.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/linear_model/plot_ols_3d.ipynb
+        :target: ../../lite/lab/?path=auto_examples/linear_model/plot_ols_3d.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

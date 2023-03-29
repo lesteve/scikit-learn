@@ -1142,7 +1142,7 @@ instead of `RidgeCV`.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/applications/plot_cyclical_feature_engineering.ipynb
+        :target: ../../lite/lab/?path=auto_examples/applications/plot_cyclical_feature_engineering.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

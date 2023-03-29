@@ -177,7 +177,7 @@ Plotting the result
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/model_selection/plot_multi_metric_evaluation.ipynb
+        :target: ../../lite/lab/?path=auto_examples/model_selection/plot_multi_metric_evaluation.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

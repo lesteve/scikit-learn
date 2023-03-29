@@ -142,7 +142,7 @@ In is recommended to compute per-fold performance metrics using:
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/model_selection/plot_cv_predict.ipynb
+        :target: ../../lite/lab/?path=auto_examples/model_selection/plot_cv_predict.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

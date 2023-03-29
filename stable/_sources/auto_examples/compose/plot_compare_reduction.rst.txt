@@ -196,7 +196,7 @@ a transformer is costly.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/compose/plot_compare_reduction.ipynb
+        :target: ../../lite/lab/?path=auto_examples/compose/plot_compare_reduction.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

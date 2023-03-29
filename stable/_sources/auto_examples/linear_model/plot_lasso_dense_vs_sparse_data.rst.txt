@@ -146,7 +146,7 @@ expect the implementation that uses the sparse data format to be faster.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/linear_model/plot_lasso_dense_vs_sparse_data.ipynb
+        :target: ../../lite/lab/?path=auto_examples/linear_model/plot_lasso_dense_vs_sparse_data.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

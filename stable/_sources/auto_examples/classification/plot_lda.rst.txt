@@ -151,7 +151,7 @@ Approximating (OAS) estimators of covariance can improve classification.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/classification/plot_lda.ipynb
+        :target: ../../lite/lab/?path=auto_examples/classification/plot_lda.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

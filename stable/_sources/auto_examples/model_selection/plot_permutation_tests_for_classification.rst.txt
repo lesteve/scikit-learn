@@ -221,7 +221,7 @@ if there is only weak structure in the data [1]_.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/model_selection/plot_permutation_tests_for_classification.ipynb
+        :target: ../../lite/lab/?path=auto_examples/model_selection/plot_permutation_tests_for_classification.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

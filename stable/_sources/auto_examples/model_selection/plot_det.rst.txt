@@ -178,7 +178,7 @@ accept at the expense of the FPR (or vice-versa).
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/model_selection/plot_det.ipynb
+        :target: ../../lite/lab/?path=auto_examples/model_selection/plot_det.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

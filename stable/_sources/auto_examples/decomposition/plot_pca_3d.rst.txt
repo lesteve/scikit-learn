@@ -160,7 +160,7 @@ Plot the figures
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/decomposition/plot_pca_3d.ipynb
+        :target: ../../lite/lab/?path=auto_examples/decomposition/plot_pca_3d.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

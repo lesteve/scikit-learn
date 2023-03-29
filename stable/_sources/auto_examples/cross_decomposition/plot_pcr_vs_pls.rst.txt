@@ -240,7 +240,7 @@ component which has the most preditive power on the target.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/cross_decomposition/plot_pcr_vs_pls.ipynb
+        :target: ../../lite/lab/?path=auto_examples/cross_decomposition/plot_pcr_vs_pls.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

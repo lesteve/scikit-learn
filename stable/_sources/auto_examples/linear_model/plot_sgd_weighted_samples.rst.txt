@@ -105,7 +105,7 @@ is proportional to its weight.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/linear_model/plot_sgd_weighted_samples.ipynb
+        :target: ../../lite/lab/?path=auto_examples/linear_model/plot_sgd_weighted_samples.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

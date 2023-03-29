@@ -186,7 +186,7 @@ dimensions.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/mixture/plot_gmm_covariances.ipynb
+        :target: ../../lite/lab/?path=auto_examples/mixture/plot_gmm_covariances.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

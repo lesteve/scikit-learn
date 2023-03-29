@@ -314,7 +314,7 @@ in :ref:`kernel_approximation`.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/miscellaneous/plot_kernel_approximation.ipynb
+        :target: ../../lite/lab/?path=auto_examples/miscellaneous/plot_kernel_approximation.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

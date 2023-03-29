@@ -192,7 +192,7 @@ contributed to fewer projections than the central disk.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/applications/plot_tomography_l1_reconstruction.ipynb
+        :target: ../../lite/lab/?path=auto_examples/applications/plot_tomography_l1_reconstruction.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

@@ -149,7 +149,7 @@ The Non-Negative Least squares inherently yield sparse results.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/linear_model/plot_nnls.ipynb
+        :target: ../../lite/lab/?path=auto_examples/linear_model/plot_nnls.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

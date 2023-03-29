@@ -135,7 +135,7 @@ kernel and its parameters.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/svm/plot_iris_svc.ipynb
+        :target: ../../lite/lab/?path=auto_examples/svm/plot_iris_svc.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

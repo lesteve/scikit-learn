@@ -152,7 +152,7 @@ is therefore detrimental for the statistical performance of the models.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/feature_selection/plot_rfe_with_cross_validation.ipynb
+        :target: ../../lite/lab/?path=auto_examples/feature_selection/plot_rfe_with_cross_validation.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

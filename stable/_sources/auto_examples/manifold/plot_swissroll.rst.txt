@@ -198,7 +198,7 @@ on real world data.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/manifold/plot_swissroll.ipynb
+        :target: ../../lite/lab/?path=auto_examples/manifold/plot_swissroll.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

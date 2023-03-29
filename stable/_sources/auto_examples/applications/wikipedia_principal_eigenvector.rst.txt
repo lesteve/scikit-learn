@@ -317,7 +317,7 @@ Computing Centrality scores
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/applications/wikipedia_principal_eigenvector.ipynb
+        :target: ../../lite/lab/?path=auto_examples/applications/wikipedia_principal_eigenvector.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

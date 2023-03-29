@@ -232,7 +232,7 @@ References
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/covariance/plot_robust_vs_empirical_covariance.ipynb
+        :target: ../../lite/lab/?path=auto_examples/covariance/plot_robust_vs_empirical_covariance.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

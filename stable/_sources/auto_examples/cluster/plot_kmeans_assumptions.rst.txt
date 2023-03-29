@@ -268,7 +268,7 @@ to restart it several times to avoid convergence to a local minimum.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/cluster/plot_kmeans_assumptions.ipynb
+        :target: ../../lite/lab/?path=auto_examples/cluster/plot_kmeans_assumptions.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

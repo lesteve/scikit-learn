@@ -159,7 +159,7 @@ Plot the true and predicted curves with log marginal likelihood (L)
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/linear_model/plot_bayesian_ridge_curvefit.ipynb
+        :target: ../../lite/lab/?path=auto_examples/linear_model/plot_bayesian_ridge_curvefit.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

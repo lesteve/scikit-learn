@@ -137,7 +137,7 @@ up the data anywhere.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/preprocessing/plot_discretization.ipynb
+        :target: ../../lite/lab/?path=auto_examples/preprocessing/plot_discretization.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

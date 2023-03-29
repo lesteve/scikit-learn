@@ -143,7 +143,7 @@ regression and ridge regression complete the lower half of those faces.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/miscellaneous/plot_multioutput_face_completion.ipynb
+        :target: ../../lite/lab/?path=auto_examples/miscellaneous/plot_multioutput_face_completion.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

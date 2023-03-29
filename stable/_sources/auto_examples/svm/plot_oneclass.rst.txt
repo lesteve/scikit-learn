@@ -116,7 +116,7 @@ classifying new data as similar or different to the training set.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/svm/plot_oneclass.ipynb
+        :target: ../../lite/lab/?path=auto_examples/svm/plot_oneclass.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

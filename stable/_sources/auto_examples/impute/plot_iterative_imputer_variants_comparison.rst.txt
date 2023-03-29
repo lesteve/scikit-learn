@@ -199,7 +199,7 @@ complex and costly missing values imputation strategies.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/impute/plot_iterative_imputer_variants_comparison.ipynb
+        :target: ../../lite/lab/?path=auto_examples/impute/plot_iterative_imputer_variants_comparison.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

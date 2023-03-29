@@ -173,7 +173,7 @@ the :func:`~sklearn.inspection.permutation_importance`.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/ensemble/plot_forest_importances_faces.ipynb
+        :target: ../../lite/lab/?path=auto_examples/ensemble/plot_forest_importances_faces.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

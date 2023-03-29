@@ -199,7 +199,7 @@ that of representing a flat map of the Earth, as with
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/manifold/plot_manifold_sphere.ipynb
+        :target: ../../lite/lab/?path=auto_examples/manifold/plot_manifold_sphere.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

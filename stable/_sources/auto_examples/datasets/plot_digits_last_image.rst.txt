@@ -77,7 +77,7 @@ for more information about this dataset.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/datasets/plot_digits_last_image.ipynb
+        :target: ../../lite/lab/?path=auto_examples/datasets/plot_digits_last_image.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

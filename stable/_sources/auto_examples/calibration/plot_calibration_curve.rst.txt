@@ -431,7 +431,7 @@ References
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/calibration/plot_calibration_curve.ipynb
+        :target: ../../lite/lab/?path=auto_examples/calibration/plot_calibration_curve.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

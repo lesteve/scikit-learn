@@ -108,7 +108,7 @@ The final 2 plots use :func:`~sklearn.datasets.make_blobs` and
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/datasets/plot_random_dataset.ipynb
+        :target: ../../lite/lab/?path=auto_examples/datasets/plot_random_dataset.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

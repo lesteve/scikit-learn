@@ -171,7 +171,7 @@ traditional (l2-penalised) logistic regression model.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/linear_model/plot_sparse_logistic_regression_20newsgroups.ipynb
+        :target: ../../lite/lab/?path=auto_examples/linear_model/plot_sparse_logistic_regression_20newsgroups.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

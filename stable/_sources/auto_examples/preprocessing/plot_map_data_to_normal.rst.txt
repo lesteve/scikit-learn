@@ -193,7 +193,7 @@ is prone to overfitting. The use of the power transform is then recommended.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/preprocessing/plot_map_data_to_normal.ipynb
+        :target: ../../lite/lab/?path=auto_examples/preprocessing/plot_map_data_to_normal.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

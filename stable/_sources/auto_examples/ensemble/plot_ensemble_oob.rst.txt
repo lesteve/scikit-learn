@@ -150,7 +150,7 @@ error stabilizes.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/ensemble/plot_ensemble_oob.ipynb
+        :target: ../../lite/lab/?path=auto_examples/ensemble/plot_ensemble_oob.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

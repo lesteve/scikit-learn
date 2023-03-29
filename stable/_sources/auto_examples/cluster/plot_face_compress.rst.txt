@@ -295,7 +295,7 @@ a 64-bit float representation.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/cluster/plot_face_compress.ipynb
+        :target: ../../lite/lab/?path=auto_examples/cluster/plot_face_compress.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

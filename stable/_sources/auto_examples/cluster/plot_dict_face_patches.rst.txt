@@ -152,7 +152,7 @@ Plot the results
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/cluster/plot_dict_face_patches.ipynb
+        :target: ../../lite/lab/?path=auto_examples/cluster/plot_dict_face_patches.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

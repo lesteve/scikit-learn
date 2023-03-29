@@ -108,7 +108,7 @@ dataset and is only used to illustrate the usage of FeatureUnion.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/compose/plot_feature_union.ipynb
+        :target: ../../lite/lab/?path=auto_examples/compose/plot_feature_union.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

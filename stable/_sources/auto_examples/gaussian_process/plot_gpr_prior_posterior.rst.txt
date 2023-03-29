@@ -373,7 +373,7 @@ Matérn kernel
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/gaussian_process/plot_gpr_prior_posterior.ipynb
+        :target: ../../lite/lab/?path=auto_examples/gaussian_process/plot_gpr_prior_posterior.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

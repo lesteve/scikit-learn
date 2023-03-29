@@ -217,7 +217,7 @@ Plotting the results
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/cluster/plot_mini_batch_kmeans.ipynb
+        :target: ../../lite/lab/?path=auto_examples/cluster/plot_mini_batch_kmeans.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

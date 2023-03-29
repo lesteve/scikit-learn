@@ -164,7 +164,7 @@ around 0.7.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/semi_supervised/plot_self_training_varying_threshold.ipynb
+        :target: ../../lite/lab/?path=auto_examples/semi_supervised/plot_self_training_varying_threshold.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

@@ -327,7 +327,7 @@ better model fit.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/compose/plot_transformed_target.ipynb
+        :target: ../../lite/lab/?path=auto_examples/compose/plot_transformed_target.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

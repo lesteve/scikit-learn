@@ -429,7 +429,7 @@ If all examples are from the same class, it uses a one-class SVM.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/applications/svm_gui.ipynb
+        :target: ../../lite/lab/?path=auto_examples/applications/svm_gui.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

@@ -216,7 +216,7 @@ as follows:
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/classification/plot_digits_classification.ipynb
+        :target: ../../lite/lab/?path=auto_examples/classification/plot_digits_classification.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

@@ -110,7 +110,7 @@ function approaches that of the ridge.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/linear_model/plot_huber_vs_ridge.ipynb
+        :target: ../../lite/lab/?path=auto_examples/linear_model/plot_huber_vs_ridge.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

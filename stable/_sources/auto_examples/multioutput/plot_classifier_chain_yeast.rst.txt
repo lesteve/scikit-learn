@@ -158,7 +158,7 @@ with randomly ordered chains).
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/multioutput/plot_classifier_chain_yeast.ipynb
+        :target: ../../lite/lab/?path=auto_examples/multioutput/plot_classifier_chain_yeast.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

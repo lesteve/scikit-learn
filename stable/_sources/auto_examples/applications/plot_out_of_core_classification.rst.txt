@@ -505,7 +505,7 @@ before feeding them to the learner.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/applications/plot_out_of_core_classification.ipynb
+        :target: ../../lite/lab/?path=auto_examples/applications/plot_out_of_core_classification.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

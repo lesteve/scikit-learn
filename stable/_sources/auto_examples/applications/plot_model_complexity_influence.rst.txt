@@ -370,7 +370,7 @@ under-fitting or over-fitting.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/applications/plot_model_complexity_influence.ipynb
+        :target: ../../lite/lab/?path=auto_examples/applications/plot_model_complexity_influence.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

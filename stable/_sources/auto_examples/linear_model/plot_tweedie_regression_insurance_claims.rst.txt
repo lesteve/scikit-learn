@@ -825,7 +825,7 @@ of models, each with its own set of hyperparameters.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/linear_model/plot_tweedie_regression_insurance_claims.ipynb
+        :target: ../../lite/lab/?path=auto_examples/linear_model/plot_tweedie_regression_insurance_claims.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

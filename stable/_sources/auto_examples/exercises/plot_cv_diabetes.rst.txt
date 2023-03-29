@@ -151,7 +151,7 @@ Bonus: how much can you trust the selection of alpha?
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/exercises/plot_cv_diabetes.ipynb
+        :target: ../../lite/lab/?path=auto_examples/exercises/plot_cv_diabetes.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

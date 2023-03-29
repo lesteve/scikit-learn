@@ -118,7 +118,7 @@ to build this documentation on a regular basis.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/neural_networks/plot_mnist_filters.ipynb
+        :target: ../../lite/lab/?path=auto_examples/neural_networks/plot_mnist_filters.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

@@ -275,7 +275,7 @@ We can finally show the different ROC curves for all the models.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/ensemble/plot_feature_transformation.ipynb
+        :target: ../../lite/lab/?path=auto_examples/ensemble/plot_feature_transformation.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

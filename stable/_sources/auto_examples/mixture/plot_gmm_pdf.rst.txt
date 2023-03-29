@@ -98,7 +98,7 @@ matrices.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/mixture/plot_gmm_pdf.ipynb
+        :target: ../../lite/lab/?path=auto_examples/mixture/plot_gmm_pdf.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

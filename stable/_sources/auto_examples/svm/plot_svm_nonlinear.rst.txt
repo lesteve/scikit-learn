@@ -90,7 +90,7 @@ The color map illustrates the decision function learned by the SVC.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/svm/plot_svm_nonlinear.ipynb
+        :target: ../../lite/lab/?path=auto_examples/svm/plot_svm_nonlinear.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

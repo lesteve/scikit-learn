@@ -253,7 +253,7 @@ Classification
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/gaussian_process/plot_gpr_on_structured_data.ipynb
+        :target: ../../lite/lab/?path=auto_examples/gaussian_process/plot_gpr_on_structured_data.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

@@ -299,7 +299,7 @@ several times for different initializations.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/gaussian_process/plot_gpr_noisy.ipynb
+        :target: ../../lite/lab/?path=auto_examples/gaussian_process/plot_gpr_noisy.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

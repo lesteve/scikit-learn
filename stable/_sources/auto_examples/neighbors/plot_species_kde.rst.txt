@@ -198,7 +198,7 @@ References
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/neighbors/plot_species_kde.ipynb
+        :target: ../../lite/lab/?path=auto_examples/neighbors/plot_species_kde.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

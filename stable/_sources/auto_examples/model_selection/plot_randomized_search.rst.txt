@@ -139,7 +139,7 @@ simultaneously using grid search, but pick only the ones deemed most important.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/model_selection/plot_randomized_search.ipynb
+        :target: ../../lite/lab/?path=auto_examples/model_selection/plot_randomized_search.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

@@ -380,7 +380,7 @@ not used for hyperparameter tuning.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/compose/plot_column_transformer_mixed_types.ipynb
+        :target: ../../lite/lab/?path=auto_examples/compose/plot_column_transformer_mixed_types.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

@@ -133,7 +133,7 @@ unbalanced classes.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/svm/plot_separating_hyperplane_unbalanced.ipynb
+        :target: ../../lite/lab/?path=auto_examples/svm/plot_separating_hyperplane_unbalanced.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

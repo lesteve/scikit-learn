@@ -235,7 +235,7 @@ show that they overlap with 0.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/ensemble/plot_gradient_boosting_regression.ipynb
+        :target: ../../lite/lab/?path=auto_examples/ensemble/plot_gradient_boosting_regression.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

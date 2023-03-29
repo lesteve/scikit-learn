@@ -87,7 +87,7 @@ K-Means++ is used as the default initialization for :ref:`k_means`.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/cluster/plot_kmeans_plusplus.ipynb
+        :target: ../../lite/lab/?path=auto_examples/cluster/plot_kmeans_plusplus.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

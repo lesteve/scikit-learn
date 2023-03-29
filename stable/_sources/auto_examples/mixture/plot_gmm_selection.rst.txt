@@ -252,7 +252,7 @@ on the `covariance_type`:
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/mixture/plot_gmm_selection.ipynb
+        :target: ../../lite/lab/?path=auto_examples/mixture/plot_gmm_selection.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

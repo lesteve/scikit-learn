@@ -215,7 +215,7 @@ SFS needs to perform `n_features - n_features_to_select = 8` iterations.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/feature_selection/plot_select_from_model_diabetes.ipynb
+        :target: ../../lite/lab/?path=auto_examples/feature_selection/plot_select_from_model_diabetes.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

@@ -94,7 +94,7 @@ perception for this example. Both methods correctly marks x_3 as irrelevant.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/feature_selection/plot_f_test_vs_mi.ipynb
+        :target: ../../lite/lab/?path=auto_examples/feature_selection/plot_f_test_vs_mi.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

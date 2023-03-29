@@ -375,7 +375,7 @@ and :math:`10^0`, regardless of the hyperparameter `norm`.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/model_selection/plot_grid_search_text_feature_extraction.ipynb
+        :target: ../../lite/lab/?path=auto_examples/model_selection/plot_grid_search_text_feature_extraction.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

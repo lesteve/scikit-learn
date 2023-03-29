@@ -173,7 +173,7 @@ between their scores.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/model_selection/plot_nested_cross_validation_iris.ipynb
+        :target: ../../lite/lab/?path=auto_examples/model_selection/plot_nested_cross_validation_iris.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

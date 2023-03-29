@@ -111,7 +111,7 @@ representation of the checkerboard structure.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/bicluster/plot_spectral_biclustering.ipynb
+        :target: ../../lite/lab/?path=auto_examples/bicluster/plot_spectral_biclustering.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

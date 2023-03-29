@@ -266,7 +266,7 @@ not scaled.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/svm/plot_svm_scale_c.ipynb
+        :target: ../../lite/lab/?path=auto_examples/svm/plot_svm_scale_c.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

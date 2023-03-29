@@ -237,7 +237,7 @@ will depend of the parameters `n_components`, `gamma`, and `alpha`.
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/applications/plot_digits_denoising.ipynb
+        :target: ../../lite/lab/?path=auto_examples/applications/plot_digits_denoising.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

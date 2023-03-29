@@ -182,7 +182,7 @@ monotonic constraints by passing a dictionary:
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/ensemble/plot_monotonic_constraints.ipynb
+        :target: ../../lite/lab/?path=auto_examples/ensemble/plot_monotonic_constraints.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 

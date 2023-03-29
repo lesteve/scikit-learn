@@ -272,7 +272,7 @@ proportional to (n_samples * iterations).
     .. container:: lite-badge
 
       .. image:: images/jupyterlite_badge_logo.svg
-        :target: /lite/lab/?path=auto_examples/applications/plot_topics_extraction_with_nmf_lda.ipynb
+        :target: ../../lite/lab/?path=auto_examples/applications/plot_topics_extraction_with_nmf_lda.ipynb
         :alt: Launch JupyterLite
         :width: 150 px
 
