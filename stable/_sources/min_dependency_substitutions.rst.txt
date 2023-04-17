@@ -1,5 +1,5 @@
 .. |NumpyMinVersion| replace:: 1.17.3
-.. |ScipyMinVersion| replace:: 1.3.2
+.. |ScipyMinVersion| replace:: 1.5.0
 .. |JoblibMinVersion| replace:: 1.1.1
 .. |ThreadpoolctlMinVersion| replace:: 2.0.0
 .. |CythonMinVersion| replace:: 0.29.33

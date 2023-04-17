@@ -318,7 +318,7 @@ discrete choices (which will be sampled uniformly) can be specified:</p>
 </div>
 <p>This example uses the <code class="docutils literal notranslate"><span class="pre">scipy.stats</span></code> module, which contains many useful
 distributions for sampling parameters, such as <code class="docutils literal notranslate"><span class="pre">expon</span></code>, <code class="docutils literal notranslate"><span class="pre">gamma</span></code>,
-<code class="docutils literal notranslate"><span class="pre">uniform</span></code> or <code class="docutils literal notranslate"><span class="pre">randint</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">uniform</span></code>, <code class="docutils literal notranslate"><span class="pre">loguniform</span></code> or <code class="docutils literal notranslate"><span class="pre">randint</span></code>.</p>
 <p>In principle, any function can be passed that provides a <code class="docutils literal notranslate"><span class="pre">rvs</span></code> (random
 variate sample) method to sample a value. A call to the <code class="docutils literal notranslate"><span class="pre">rvs</span></code> function should
 provide independent random samples from possible parameter values on
@@ -337,11 +337,9 @@ by the user if scipy &gt;= 0.16 is also available.</p>
 <p>For continuous parameters, such as <code class="docutils literal notranslate"><span class="pre">C</span></code> above, it is important to specify
 a continuous distribution to take full advantage of the randomization. This way,
 increasing <code class="docutils literal notranslate"><span class="pre">n_iter</span></code> will always lead to a finer search.</p>
-<p>A continuous log-uniform random variable is available through
-<code class="xref py py-class docutils literal notranslate"><span class="pre">loguniform</span></code>. This is a continuous version of
-log-spaced parameters. For example to specify <code class="docutils literal notranslate"><span class="pre">C</span></code> above, <code class="docutils literal notranslate"><span class="pre">loguniform(1,</span>
-<span class="pre">100)</span></code> can be used instead of <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">10,</span> <span class="pre">100]</span></code> or <code class="docutils literal notranslate"><span class="pre">np.logspace(0,</span> <span class="pre">2,</span>
-<span class="pre">num=1000)</span></code>. This is an alias to <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.loguniform.html">scipy.stats.loguniform</a>.</p>
+<p>A continuous log-uniform random variable is the continuous version of
+a log-spaced parameter. For example to specify the equivalent of <code class="docutils literal notranslate"><span class="pre">C</span></code> from above,
+<code class="docutils literal notranslate"><span class="pre">loguniform(1,</span> <span class="pre">100)</span></code> can be used instead of <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">10,</span> <span class="pre">100]</span></code>.</p>
 <p>Mirroring the example above in grid search, we can specify a continuous random
 variable that is log-uniformly distributed between <code class="docutils literal notranslate"><span class="pre">1e0</span></code> and <code class="docutils literal notranslate"><span class="pre">1e3</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.utils.fixes</span> <span class="kn">import</span> <span class="n">loguniform</span>

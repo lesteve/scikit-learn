@@ -191,7 +191,7 @@
 <h1><a class="reference internal" href="../classes.html#module-sklearn.pipeline" title="sklearn.pipeline"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.pipeline</span></code></a>.make_pipeline<a class="headerlink" href="#sklearn-pipeline-make-pipeline" title="Permalink to this heading">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="sklearn.pipeline.make_pipeline">
-<span class="sig-prename descclassname"><span class="pre">sklearn.pipeline.</span></span><span class="sig-name descname"><span class="pre">make_pipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">steps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eed70a84f/sklearn/pipeline.py#L848"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sklearn.pipeline.make_pipeline" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sklearn.pipeline.</span></span><span class="sig-name descname"><span class="pre">make_pipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">steps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/59947d32c/sklearn/pipeline.py#L848"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sklearn.pipeline.make_pipeline" title="Permalink to this definition">¶</a></dt>
 <dd><p>Construct a <a class="reference internal" href="sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline" title="sklearn.pipeline.Pipeline"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pipeline</span></code></a> from the given estimators.</p>
 <p>This is a shorthand for the <a class="reference internal" href="sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline" title="sklearn.pipeline.Pipeline"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pipeline</span></code></a> constructor; it does not
 require, and does not permit, naming the estimators. Instead, their names
@@ -201,13 +201,13 @@ will be set to the lowercase of their types automatically.</p>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>*steps</strong><span class="classifier">list of Estimator objects</span></dt><dd><p>List of the scikit-learn estimators that are chained together.</p>
 </dd>
-<dt><strong>memory</strong><span class="classifier">str or object with the joblib.Memory interface, default=None</span></dt><dd><p>Used to cache the fitted transformers of the pipeline. By default,
-no caching is performed. If a string is given, it is the path to
-the caching directory. Enabling caching triggers a clone of
-the transformers before fitting. Therefore, the transformer
-instance given to the pipeline cannot be inspected
-directly. Use the attribute <code class="docutils literal notranslate"><span class="pre">named_steps</span></code> or <code class="docutils literal notranslate"><span class="pre">steps</span></code> to
-inspect estimators within the pipeline. Caching the
+<dt><strong>memory</strong><span class="classifier">str or object with the joblib.Memory interface, default=None</span></dt><dd><p>Used to cache the fitted transformers of the pipeline. The last step
+will never be cached, even if it is a transformer. By default, no
+caching is performed. If a string is given, it is the path to the
+caching directory. Enabling caching triggers a clone of the transformers
+before fitting. Therefore, the transformer instance given to the
+pipeline cannot be inspected directly. Use the attribute <code class="docutils literal notranslate"><span class="pre">named_steps</span></code>
+or <code class="docutils literal notranslate"><span class="pre">steps</span></code> to inspect estimators within the pipeline. Caching the
 transformers is advantageous when fitting is time consuming.</p>
 </dd>
 <dt><strong>verbose</strong><span class="classifier">bool, default=False</span></dt><dd><p>If True, the time elapsed while fitting each step will be printed as it
@@ -362,6 +362,9 @@ is completed.</p>
 </div><div class="sphx-glr-thumbcontainer" tooltip="A comparison of different values for regularization parameter &#x27;alpha&#x27; on synthetic datasets. Th..."><img alt="" src="../../_images/sphx_glr_plot_mlp_alpha_thumb.png" />
 <p><a class="reference internal" href="../../auto_examples/neural_networks/plot_mlp_alpha.html#sphx-glr-auto-examples-neural-networks-plot-mlp-alpha-py"><span class="std std-ref">Varying regularization in Multi-layer Perceptron</span></a></p>
   <div class="sphx-glr-thumbnail-title">Varying regularization in Multi-layer Perceptron</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="The TargetEncoder uses the value of the target to encode each categorical feature. In this exam..."><img alt="" src="../../_images/sphx_glr_plot_target_encoder_thumb.png" />
+<p><a class="reference internal" href="../../auto_examples/preprocessing/plot_target_encoder.html#sphx-glr-auto-examples-preprocessing-plot-target-encoder-py"><span class="std std-ref">Comparing Target Encoder with Other Encoders</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Comparing Target Encoder with Other Encoders</div>
 </div><div class="sphx-glr-thumbcontainer" tooltip="A demonstration of feature discretization on synthetic classification datasets. Feature discret..."><img alt="" src="../../_images/sphx_glr_plot_discretization_classification_thumb.png" />
 <p><a class="reference internal" href="../../auto_examples/preprocessing/plot_discretization_classification.html#sphx-glr-auto-examples-preprocessing-plot-discretization-classification-py"><span class="std std-ref">Feature discretization</span></a></p>
   <div class="sphx-glr-thumbnail-title">Feature discretization</div>

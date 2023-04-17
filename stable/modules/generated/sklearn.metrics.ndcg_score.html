@@ -188,7 +188,7 @@
 <h1><a class="reference internal" href="../classes.html#module-sklearn.metrics" title="sklearn.metrics"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.metrics</span></code></a>.ndcg_score<a class="headerlink" href="#sklearn-metrics-ndcg-score" title="Permalink to this heading">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="sklearn.metrics.ndcg_score">
-<span class="sig-prename descclassname"><span class="pre">sklearn.metrics.</span></span><span class="sig-name descname"><span class="pre">ndcg_score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_score</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_ties</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eed70a84f/sklearn/metrics/_ranking.py#L1623"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sklearn.metrics.ndcg_score" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sklearn.metrics.</span></span><span class="sig-name descname"><span class="pre">ndcg_score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_score</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_ties</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/59947d32c/sklearn/metrics/_ranking.py#L1648"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sklearn.metrics.ndcg_score" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute Normalized Discounted Cumulative Gain.</p>
 <p>Sum the true scores ranked in the order induced by the predicted scores,
 after applying a logarithmic discount. Then divide by the best possible
@@ -199,21 +199,21 @@ score (Ideal DCG, obtained for a perfect ranking) to obtain a score between
 <dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
-<dt><strong>y_true</strong><span class="classifier">ndarray of shape (n_samples, n_labels)</span></dt><dd><p>True targets of multilabel classification, or true scores of entities
+<dt><strong>y_true</strong><span class="classifier">array-like of shape (n_samples, n_labels)</span></dt><dd><p>True targets of multilabel classification, or true scores of entities
 to be ranked. Negative values in <code class="docutils literal notranslate"><span class="pre">y_true</span></code> may result in an output
 that is not between 0 and 1.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 1.2: </span>These negative values are deprecated, and will raise an error in v1.4.</p>
 </div>
 </dd>
-<dt><strong>y_score</strong><span class="classifier">ndarray of shape (n_samples, n_labels)</span></dt><dd><p>Target scores, can either be probability estimates, confidence values,
+<dt><strong>y_score</strong><span class="classifier">array-like of shape (n_samples, n_labels)</span></dt><dd><p>Target scores, can either be probability estimates, confidence values,
 or non-thresholded measure of decisions (as returned by
 “decision_function” on some classifiers).</p>
 </dd>
 <dt><strong>k</strong><span class="classifier">int, default=None</span></dt><dd><p>Only consider the highest k scores in the ranking. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, use all
 outputs.</p>
 </dd>
-<dt><strong>sample_weight</strong><span class="classifier">ndarray of shape (n_samples,), default=None</span></dt><dd><p>Sample weights. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, all samples are given the same weight.</p>
+<dt><strong>sample_weight</strong><span class="classifier">array-like of shape (n_samples,), default=None</span></dt><dd><p>Sample weights. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, all samples are given the same weight.</p>
 </dd>
 <dt><strong>ignore_ties</strong><span class="classifier">bool, default=False</span></dt><dd><p>Assume that there are no ties in y_score (which is likely to be the
 case if y_score is continuous) for efficiency gains.</p>

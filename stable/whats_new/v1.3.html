@@ -250,6 +250,14 @@ is small. <a class="reference external" href="https://github.com/scikit-learn/sc
 <code class="docutils literal notranslate"><span class="pre">fit</span></code> and <code class="docutils literal notranslate"><span class="pre">transform</span></code> steps of <a class="reference internal" href="../modules/generated/sklearn.decomposition.NMF.html#sklearn.decomposition.NMF" title="sklearn.decomposition.NMF"><code class="xref py py-class docutils literal notranslate"><span class="pre">decomposition.NMF</span></code></a> and
 <a class="reference internal" href="../modules/generated/sklearn.decomposition.MiniBatchNMF.html#sklearn.decomposition.MiniBatchNMF" title="sklearn.decomposition.MiniBatchNMF"><code class="xref py py-class docutils literal notranslate"><span class="pre">decomposition.MiniBatchNMF</span></code></a> which can produce different results than previous
 versions. <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/25438">#25438</a> by <a class="reference external" href="https://github.com/yotamcons">Yotam Avidar-Constantini</a>.</p></li>
+<li><p><span class="raw-html"><span class="badge badge-info">Enhancement</span></span>  The <code class="docutils literal notranslate"><span class="pre">sample_weight</span></code> parameter now will be used in centroids
+initialization for <a class="reference internal" href="../modules/generated/sklearn.cluster.KMeans.html#sklearn.cluster.KMeans" title="sklearn.cluster.KMeans"><code class="xref py py-class docutils literal notranslate"><span class="pre">cluster.KMeans</span></code></a>, <a class="reference internal" href="../modules/generated/sklearn.cluster.BisectingKMeans.html#sklearn.cluster.BisectingKMeans" title="sklearn.cluster.BisectingKMeans"><code class="xref py py-class docutils literal notranslate"><span class="pre">cluster.BisectingKMeans</span></code></a>
+and <a class="reference internal" href="../modules/generated/sklearn.cluster.MiniBatchKMeans.html#sklearn.cluster.MiniBatchKMeans" title="sklearn.cluster.MiniBatchKMeans"><code class="xref py py-class docutils literal notranslate"><span class="pre">cluster.MiniBatchKMeans</span></code></a>.
+This change will break backward compatibility, since numbers generated
+from same random seeds will be different.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/25752">#25752</a> by <a class="reference external" href="https://github.com/glevv">Gleb Levitski</a>,
+<a class="reference external" href="https://github.com/jeremiedbb">Jérémie du Boisberranger</a>,
+<a class="reference external" href="https://github.com/glemaitre">Guillaume Lemaitre</a>.</p></li>
 </ul>
 </section>
 <section id="changes-impacting-all-modules">
@@ -340,6 +348,8 @@ for this case on commonly available laptops.</p>
 <ul class="simple">
 <li><p><span class="raw-html"><span class="badge badge-info">Enhancement</span></span>  All selectors in <a class="reference internal" href="../modules/classes.html#module-sklearn.feature_selection" title="sklearn.feature_selection"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.feature_selection</span></code></a> will preserve
 a DataFrame’s dtype when transformed. <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/25102">#25102</a> by <a class="reference external" href="https://github.com/thomasjpfan">Thomas Fan</a>.</p></li>
+<li><p><span class="raw-html"><span class="badge badge-danger">Fix</span></span>  <a class="reference internal" href="../modules/generated/sklearn.feature_selection.SequentialFeatureSelector.html#sklearn.feature_selection.SequentialFeatureSelector" title="sklearn.feature_selection.SequentialFeatureSelector"><code class="xref py py-class docutils literal notranslate"><span class="pre">feature_selection.SequentialFeatureSelector</span></code></a>’s <code class="docutils literal notranslate"><span class="pre">cv</span></code> parameter
+now supports generators. <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/25973">#25973</a> by <code class="docutils literal notranslate"><span class="pre">Yao</span> <span class="pre">Xiao</span> <span class="pre">&lt;Charlie-XIAO&gt;</span></code>.</p></li>
 </ul>
 </section>
 <section id="sklearn-base">
@@ -363,6 +373,14 @@ alignment on <code class="docutils literal notranslate"><span class="pre">fit_pa
 <a class="reference internal" href="../modules/generated/sklearn.cluster.KMeans.html#sklearn.cluster.KMeans.predict" title="sklearn.cluster.KMeans.predict"><code class="xref py py-meth docutils literal notranslate"><span class="pre">cluster.KMeans.predict</span></code></a> and <a class="reference internal" href="../modules/generated/sklearn.cluster.MiniBatchKMeans.html#sklearn.cluster.MiniBatchKMeans.predict" title="sklearn.cluster.MiniBatchKMeans.predict"><code class="xref py py-meth docutils literal notranslate"><span class="pre">cluster.MiniBatchKMeans.predict</span></code></a>
 is now deprecated and will be removed in v1.5.
 <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/25251">#25251</a> by <a class="reference external" href="https://github.com/glevv">Gleb Levitski</a>.</p></li>
+<li><p><span class="raw-html"><span class="badge badge-info">Enhancement</span></span>  The <code class="docutils literal notranslate"><span class="pre">sample_weight</span></code> parameter now will be used in centroids
+initialization for <a class="reference internal" href="../modules/generated/sklearn.cluster.KMeans.html#sklearn.cluster.KMeans" title="sklearn.cluster.KMeans"><code class="xref py py-class docutils literal notranslate"><span class="pre">cluster.KMeans</span></code></a>, <a class="reference internal" href="../modules/generated/sklearn.cluster.BisectingKMeans.html#sklearn.cluster.BisectingKMeans" title="sklearn.cluster.BisectingKMeans"><code class="xref py py-class docutils literal notranslate"><span class="pre">cluster.BisectingKMeans</span></code></a>
+and <a class="reference internal" href="../modules/generated/sklearn.cluster.MiniBatchKMeans.html#sklearn.cluster.MiniBatchKMeans" title="sklearn.cluster.MiniBatchKMeans"><code class="xref py py-class docutils literal notranslate"><span class="pre">cluster.MiniBatchKMeans</span></code></a>.
+This change will break backward compatibility, since numbers generated
+from same random seeds will be different.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/25752">#25752</a> by <a class="reference external" href="https://github.com/glevv">Gleb Levitski</a>,
+<a class="reference external" href="https://github.com/jeremiedbb">Jérémie du Boisberranger</a>,
+<a class="reference external" href="https://github.com/glemaitre">Guillaume Lemaitre</a>.</p></li>
 </ul>
 </section>
 <section id="sklearn-datasets">
@@ -416,6 +434,10 @@ underlying estimator. <a class="reference external" href="https://github.com/sci
 <li><p><span class="raw-html"><span class="badge badge-danger">Fix</span></span>  <a class="reference internal" href="../modules/generated/sklearn.ensemble.RandomForestClassifier.html#sklearn.ensemble.RandomForestClassifier.fit" title="sklearn.ensemble.RandomForestClassifier.fit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ensemble.RandomForestClassifier.fit</span></code></a> sets <code class="docutils literal notranslate"><span class="pre">max_samples</span> <span class="pre">=</span> <span class="pre">1</span></code>
 when <code class="docutils literal notranslate"><span class="pre">max_samples</span></code> is a float and <code class="docutils literal notranslate"><span class="pre">round(n_samples</span> <span class="pre">*</span> <span class="pre">max_samples)</span> <span class="pre">&lt;</span> <span class="pre">1</span></code>.
 <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/25601">#25601</a> by <a class="reference external" href="https://github.com/JanFidor">Jan Fidor</a>.</p></li>
+<li><p><span class="raw-html"><span class="badge badge-danger">Fix</span></span>  <a class="reference internal" href="../modules/generated/sklearn.ensemble.IsolationForest.html#sklearn.ensemble.IsolationForest.fit" title="sklearn.ensemble.IsolationForest.fit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ensemble.IsolationForest.fit</span></code></a> no longer warns about missing
+feature names when called with <code class="docutils literal notranslate"><span class="pre">contamination</span></code> not <code class="docutils literal notranslate"><span class="pre">&quot;auto&quot;</span></code> on a pandas
+dataframe.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/25931">#25931</a> by <a class="reference external" href="https://github.com/Charlie-XIAO">Yao Xiao</a>.</p></li>
 </ul>
 </section>
 <section id="sklearn-exception">
@@ -470,8 +492,34 @@ unique labels is large and its memory usage is reduced in general.
 <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/25713">#25713</a> by <a class="reference external" href="https://github.com/Kshitij68">Kshitij Mathur</a>,
 <a class="reference external" href="https://github.com/glemaitre">Guillaume Lemaitre</a>, <a class="reference external" href="https://github.com/OmarManzoor">Omar Salman</a> and
 <a class="reference external" href="https://github.com/jeremiedbb">Jérémie du Boisberranger</a>.</p></li>
+<li><p><span class="raw-html"><span class="badge badge-success">Feature</span></span>  Adds <code class="docutils literal notranslate"><span class="pre">zero_division=np.nan</span></code> to multiple classification metrics:
+<code class="xref py py-func docutils literal notranslate"><span class="pre">precision_score</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">recall_score</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">f1_score</span></code>,
+<code class="xref py py-func docutils literal notranslate"><span class="pre">fbeta_score</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">precision_recall_fscore_support</span></code>,
+<code class="xref py py-func docutils literal notranslate"><span class="pre">classification_report</span></code>. When <code class="docutils literal notranslate"><span class="pre">zero_division=np.nan</span></code> and there is a
+zero division, the metric is undefined and is excluded from averaging. When not used
+for averages, the value returned is <code class="docutils literal notranslate"><span class="pre">np.nan</span></code>.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/25531">#25531</a> by <a class="reference external" href="https://github.com/marctorsoc">Marc Torrellas Socastro</a>.</p></li>
 <li><p><span class="raw-html"><span class="badge badge-danger">Fix</span></span>  <code class="xref py py-func docutils literal notranslate"><span class="pre">metric.manhattan_distances</span></code> now supports readonly sparse datasets.
 <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/25432">#25432</a> by <a class="reference external" href="https://github.com/jjerphan">Julien Jerphanion</a>.</p></li>
+<li><p><span class="raw-html"><span class="badge badge-danger">Fix</span></span>  Fixed <code class="xref py py-func docutils literal notranslate"><span class="pre">classification_report</span></code> so that empty input will return
+<code class="docutils literal notranslate"><span class="pre">np.nan</span></code>. Previously, “macro avg” and <code class="docutils literal notranslate"><span class="pre">weighted</span> <span class="pre">avg</span></code> would return
+e.g. <code class="docutils literal notranslate"><span class="pre">f1-score=np.nan</span></code> and <code class="docutils literal notranslate"><span class="pre">f1-score=0.0</span></code>, being inconsistent. Now, they
+both return <code class="docutils literal notranslate"><span class="pre">np.nan</span></code>.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/25531">#25531</a> by <a class="reference external" href="https://github.com/marctorsoc">Marc Torrellas Socastro</a>.</p></li>
+<li><p><span class="raw-html"><span class="badge badge-danger">Fix</span></span>  <code class="xref py py-func docutils literal notranslate"><span class="pre">metric.ndcg_score</span></code> now gives a meaningful error message for input of
+length 1.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/25672">#25672</a> by <a class="reference external" href="https://github.com/lene">Lene Preuss</a> and <a class="reference external" href="https://github.com/wcchu">Wei-Chun Chu</a>.</p></li>
+<li><p><span class="raw-html"><span class="badge badge-info">Enhancement</span></span>  <a class="reference internal" href="../modules/generated/sklearn.metrics.silhouette_samples.html#sklearn.metrics.silhouette_samples" title="sklearn.metrics.silhouette_samples"><code class="xref py py-class docutils literal notranslate"><span class="pre">metrics.silhouette_samples</span></code></a> nows accepts a sparse
+matrix of pairwise distances between samples, or a feature array.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/18723">#18723</a> by <a class="reference external" href="https://github.com/sahilgupta2105">Sahil Gupta</a> and
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/24677">#24677</a> by <a class="reference external" href="https://github.com/awinml">Ashwin Mathur</a>.</p></li>
+<li><p><span class="raw-html"><span class="badge badge-info">Enhancement</span></span>  A new parameter <code class="docutils literal notranslate"><span class="pre">drop_intermediate</span></code> was added to
+<a class="reference internal" href="../modules/generated/sklearn.metrics.precision_recall_curve.html#sklearn.metrics.precision_recall_curve" title="sklearn.metrics.precision_recall_curve"><code class="xref py py-func docutils literal notranslate"><span class="pre">metrics.precision_recall_curve</span></code></a>,
+<a class="reference internal" href="../modules/generated/sklearn.metrics.PrecisionRecallDisplay.html#sklearn.metrics.PrecisionRecallDisplay.from_estimator" title="sklearn.metrics.PrecisionRecallDisplay.from_estimator"><code class="xref py py-func docutils literal notranslate"><span class="pre">metrics.PrecisionRecallDisplay.from_estimator</span></code></a>,
+<a class="reference internal" href="../modules/generated/sklearn.metrics.PrecisionRecallDisplay.html#sklearn.metrics.PrecisionRecallDisplay.from_predictions" title="sklearn.metrics.PrecisionRecallDisplay.from_predictions"><code class="xref py py-func docutils literal notranslate"><span class="pre">metrics.PrecisionRecallDisplay.from_predictions</span></code></a>,
+which drops some suboptimal thresholds to create lighter precision-recall
+curves.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/24668">#24668</a> by <a class="reference external" href="https://github.com/dberenbaum">&#64;dberenbaum</a>.</p></li>
 <li><p><span class="raw-html"><span class="badge badge-danger">Fix</span></span>  <code class="xref py py-func docutils literal notranslate"><span class="pre">log_loss</span></code> raises a warning if the values of the parameter <code class="docutils literal notranslate"><span class="pre">y_pred</span></code> are
 not normalized, instead of actually normalizing them in the metric. Starting from
 1.5 this will raise an error. <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/25299">#25299</a> by <a class="reference external" href="https://github.com/Omar Salman &lt;OmarManzoor">&#64;Omar Salman &lt;OmarManzoor</a>.</p></li>
@@ -533,6 +581,9 @@ of iterations performed since the initialization of the estimator.
 <section id="sklearn-preprocessing">
 <h3><a class="reference internal" href="../modules/classes.html#module-sklearn.preprocessing" title="sklearn.preprocessing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.preprocessing</span></code></a><a class="headerlink" href="#sklearn-preprocessing" title="Permalink to this heading">¶</a></h3>
 <ul class="simple">
+<li><p><span class="raw-html"><span class="badge badge-success">Major Feature</span></span>  Introduces <a class="reference internal" href="../modules/generated/sklearn.preprocessing.TargetEncoder.html#sklearn.preprocessing.TargetEncoder" title="sklearn.preprocessing.TargetEncoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">preprocessing.TargetEncoder</span></code></a> which is a
+categorical encoding based on target mean conditioned on the value of the
+category. <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/25334">#25334</a> by <a class="reference external" href="https://github.com/thomasjpfan">Thomas Fan</a>.</p></li>
 <li><p><span class="raw-html"><span class="badge badge-info">Enhancement</span></span>  Adds a <code class="docutils literal notranslate"><span class="pre">feature_name_combiner</span></code> parameter to
 <a class="reference internal" href="../modules/generated/sklearn.preprocessing.OneHotEncoder.html#sklearn.preprocessing.OneHotEncoder" title="sklearn.preprocessing.OneHotEncoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">preprocessing.OneHotEncoder</span></code></a>. This specifies a custom callable to create
 feature names to be returned by <code class="xref py py-meth docutils literal notranslate"><span class="pre">get_feature_names_out</span></code>.
@@ -544,6 +595,10 @@ The callable combines input arguments <code class="docutils literal notranslate"
 available when <code class="docutils literal notranslate"><span class="pre">strategy</span></code> is set to <code class="docutils literal notranslate"><span class="pre">quantile</span></code> and <code class="docutils literal notranslate"><span class="pre">kmeans</span></code>.
 <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/24935">#24935</a> by <a class="reference external" href="https://github.com/seladus">Seladus</a>, <a class="reference external" href="https://github.com/glemaitre">Guillaume Lemaitre</a>, and
 <a class="reference external" href="https://github.com/deamarialeon">Dea María Léon</a>, <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/25257">#25257</a> by <a class="reference external" href="https://github.com/glevv">Gleb Levitski</a>.</p></li>
+<li><p><span class="raw-html"><span class="badge badge-success">Feature</span></span>  <a class="reference internal" href="../modules/generated/sklearn.preprocessing.OrdinalEncoder.html#sklearn.preprocessing.OrdinalEncoder" title="sklearn.preprocessing.OrdinalEncoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">preprocessing.OrdinalEncoder</span></code></a> now supports grouping
+infrequent categories into a single feature. Grouping infrequent categories
+is enabled by specifying how to select infrequent categories with
+<code class="docutils literal notranslate"><span class="pre">min_frequency</span></code> or <code class="docutils literal notranslate"><span class="pre">max_categories</span></code>. <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/25677">#25677</a> by <a class="reference external" href="https://github.com/thomasjpfan">Thomas Fan</a>.</p></li>
 <li><p><span class="raw-html"><span class="badge badge-danger">Fix</span></span>  <code class="xref py py-class docutils literal notranslate"><span class="pre">AdditiveChi2Sampler</span></code> is now stateless.
 The <code class="docutils literal notranslate"><span class="pre">sample_interval_</span></code> attribute is deprecated and will be removed in 1.5.
 <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/25190">#25190</a> by <a class="reference external" href="https://github.com/Vincent-Maladiere">Vincent Maladière</a>.</p></li>
@@ -570,6 +625,11 @@ a deprecated base class (i.e. decorated by <a class="reference internal" href=".
 overrides the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method.
 <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/25733">#25733</a> by <a class="reference external" href="https://github.com/bsipocz">Brigitta Sipőcz</a> and
 <a class="reference external" href="https://github.com/jeremiedbb">Jérémie du Boisberranger</a>.</p></li>
+<li><p><span class="raw-html"><span class="badge badge-danger">Fix</span></span>  Fixes <code class="xref py py-func docutils literal notranslate"><span class="pre">utils.validation.check_array</span></code> to properly convert pandas
+extension arrays. <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/25813">#25813</a> by <a class="reference external" href="https://github.com/thomasjpfan">Thomas Fan</a>.</p></li>
+<li><p><span class="raw-html"><span class="badge badge-danger">Fix</span></span>  <code class="xref py py-func docutils literal notranslate"><span class="pre">utils.validation.check_array</span></code> now suports pandas DataFrames with
+extension arrays and object dtypes by return an ndarray with object dtype.
+<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/pull/25814">#25814</a> by <a class="reference external" href="https://github.com/thomasjpfan">Thomas Fan</a>.</p></li>
 </ul>
 </section>
 <section id="sklearn-semi-supervised">

@@ -190,6 +190,7 @@
 <li><a class="reference internal" href="#normalization">6.3.3. Normalization</a></li>
 <li><a class="reference internal" href="#encoding-categorical-features">6.3.4. Encoding categorical features</a><ul>
 <li><a class="reference internal" href="#infrequent-categories">6.3.4.1. Infrequent categories</a></li>
+<li><a class="reference internal" href="#target-encoder">6.3.4.2. Target Encoder</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#discretization">6.3.5. Discretization</a><ul>
@@ -863,10 +864,11 @@ separate categories:</p>
 <p>See <a class="reference internal" href="feature_extraction.html#dict-feature-extraction"><span class="std std-ref">Loading features from dicts</span></a> for categorical features that are
 represented as a dict, not as scalars.</p>
 <section id="infrequent-categories">
-<span id="one-hot-encoder-infrequent-categories"></span><h3><span class="section-number">6.3.4.1. </span>Infrequent categories<a class="headerlink" href="#infrequent-categories" title="Permalink to this heading">¶</a></h3>
-<p><a class="reference internal" href="generated/sklearn.preprocessing.OneHotEncoder.html#sklearn.preprocessing.OneHotEncoder" title="sklearn.preprocessing.OneHotEncoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneHotEncoder</span></code></a> supports aggregating infrequent categories into a single
-output for each feature. The parameters to enable the gathering of infrequent
-categories are <code class="docutils literal notranslate"><span class="pre">min_frequency</span></code> and <code class="docutils literal notranslate"><span class="pre">max_categories</span></code>.</p>
+<span id="encoder-infrequent-categories"></span><h3><span class="section-number">6.3.4.1. </span>Infrequent categories<a class="headerlink" href="#infrequent-categories" title="Permalink to this heading">¶</a></h3>
+<p><a class="reference internal" href="generated/sklearn.preprocessing.OneHotEncoder.html#sklearn.preprocessing.OneHotEncoder" title="sklearn.preprocessing.OneHotEncoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneHotEncoder</span></code></a> and <a class="reference internal" href="generated/sklearn.preprocessing.OrdinalEncoder.html#sklearn.preprocessing.OrdinalEncoder" title="sklearn.preprocessing.OrdinalEncoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrdinalEncoder</span></code></a> support aggregating
+infrequent categories into a single output for each feature. The parameters to
+enable the gathering of infrequent categories are <code class="docutils literal notranslate"><span class="pre">min_frequency</span></code> and
+<code class="docutils literal notranslate"><span class="pre">max_categories</span></code>.</p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">min_frequency</span></code> is either an  integer greater or equal to 1, or a float in
 the interval <code class="docutils literal notranslate"><span class="pre">(0.0,</span> <span class="pre">1.0)</span></code>. If <code class="docutils literal notranslate"><span class="pre">min_frequency</span></code> is an integer, categories with
@@ -879,11 +881,47 @@ parameter sets an upper limit to the number of output features for each
 input feature. <code class="docutils literal notranslate"><span class="pre">max_categories</span></code> includes the feature that combines
 infrequent categories.</p></li>
 </ol>
-<p>In the following example, the categories, <code class="docutils literal notranslate"><span class="pre">'dog',</span> <span class="pre">'snake'</span></code> are considered
-infrequent:</p>
+<p>In the following example with <a class="reference internal" href="generated/sklearn.preprocessing.OrdinalEncoder.html#sklearn.preprocessing.OrdinalEncoder" title="sklearn.preprocessing.OrdinalEncoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrdinalEncoder</span></code></a>, the categories <code class="docutils literal notranslate"><span class="pre">'dog'</span> <span class="pre">and</span>
+<span class="pre">'snake'</span></code> are considered infrequent:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="s1">&#39;dog&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">20</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;rabbit&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span>
 <span class="gp">... </span>              <span class="p">[</span><span class="s1">&#39;snake&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">enc</span> <span class="o">=</span> <span class="n">preprocessing</span><span class="o">.</span><span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">min_frequency</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">sparse_output</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">enc</span> <span class="o">=</span> <span class="n">preprocessing</span><span class="o">.</span><span class="n">OrdinalEncoder</span><span class="p">(</span><span class="n">min_frequency</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">enc</span><span class="o">.</span><span class="n">infrequent_categories_</span>
+<span class="go">[array([&#39;dog&#39;, &#39;snake&#39;], dtype=object)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">enc</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="s1">&#39;dog&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;rabbit&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;snake&#39;</span><span class="p">]]))</span>
+<span class="go">array([[2.],</span>
+<span class="go">       [0.],</span>
+<span class="go">       [1.],</span>
+<span class="go">       [2.]])</span>
+</pre></div>
+</div>
+<p><a class="reference internal" href="generated/sklearn.preprocessing.OrdinalEncoder.html#sklearn.preprocessing.OrdinalEncoder" title="sklearn.preprocessing.OrdinalEncoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrdinalEncoder</span></code></a>’s <code class="docutils literal notranslate"><span class="pre">max_categories</span></code> do <strong>not</strong> take into account missing
+or unknown categories. Setting <code class="docutils literal notranslate"><span class="pre">unknown_value</span></code> or <code class="docutils literal notranslate"><span class="pre">encoded_missing_value</span></code> to an
+integer will increase the number of unique integer codes by one each. This can
+result in up to <code class="docutils literal notranslate"><span class="pre">max_categories</span> <span class="pre">+</span> <span class="pre">2</span></code> integer codes. In the following example,
+“a” and “d” are considered infrequent and grouped together into a single
+category, “b” and “c” are their own categories, unknown values are encoded as 3
+and missing values are encoded as 4.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">X_train</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="p">[[</span><span class="s2">&quot;a&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;b&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">20</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;c&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;d&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">+</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">]],</span>
+<span class="gp">... </span>    <span class="n">dtype</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">enc</span> <span class="o">=</span> <span class="n">preprocessing</span><span class="o">.</span><span class="n">OrdinalEncoder</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">handle_unknown</span><span class="o">=</span><span class="s2">&quot;use_encoded_value&quot;</span><span class="p">,</span> <span class="n">unknown_value</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">max_categories</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">encoded_missing_value</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">enc</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">X_test</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="s2">&quot;a&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;b&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;c&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;d&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;e&quot;</span><span class="p">],</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">enc</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="go">array([[2.],</span>
+<span class="go">       [0.],</span>
+<span class="go">       [1.],</span>
+<span class="go">       [2.],</span>
+<span class="go">       [3.],</span>
+<span class="go">       [4.]])</span>
+</pre></div>
+</div>
+<p>Similarity, <a class="reference internal" href="generated/sklearn.preprocessing.OneHotEncoder.html#sklearn.preprocessing.OneHotEncoder" title="sklearn.preprocessing.OneHotEncoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">OneHotEncoder</span></code></a> can be configured to group together infrequent
+categories:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">enc</span> <span class="o">=</span> <span class="n">preprocessing</span><span class="o">.</span><span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">min_frequency</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">sparse_output</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">enc</span><span class="o">.</span><span class="n">infrequent_categories_</span>
 <span class="go">[array([&#39;dog&#39;, &#39;snake&#39;], dtype=object)]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">enc</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="s1">&#39;dog&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;rabbit&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;snake&#39;</span><span class="p">]]))</span>
@@ -959,6 +997,84 @@ lexicon order.</p>
 </pre></div>
 </div>
 </section>
+<section id="target-encoder">
+<span id="id2"></span><h3><span class="section-number">6.3.4.2. </span>Target Encoder<a class="headerlink" href="#target-encoder" title="Permalink to this heading">¶</a></h3>
+<p>The <a class="reference internal" href="generated/sklearn.preprocessing.TargetEncoder.html#sklearn.preprocessing.TargetEncoder" title="sklearn.preprocessing.TargetEncoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">TargetEncoder</span></code></a> uses the target mean conditioned on the categorical
+feature for encoding unordered categories, i.e. nominal categories <a class="reference internal" href="#par" id="id3"><span>[PAR]</span></a>
+<a class="reference internal" href="#mic" id="id4"><span>[MIC]</span></a>. This encoding scheme is useful with categorical features with high
+cardinality, where one-hot encoding would inflate the feature space making it
+more expensive for a downstream model to process. A classical example of high
+cardinality categories are location based such as zip code or region. For the
+binary classification target, the target encoding is given by:</p>
+<div class="math notranslate nohighlight">
+\[S_i = \lambda_i\frac{n_{iY}}{n_i} + (1 - \lambda_i)\frac{n_y}{n}\]</div>
+<p>where <span class="math notranslate nohighlight">\(S_i\)</span> is the encoding for category <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(n_{iY}\)</span> is the
+number of observations with <span class="math notranslate nohighlight">\(Y=1\)</span> with category <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(n_i\)</span> is
+the number of observations with category <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(n_y\)</span> is the number of
+observations with <span class="math notranslate nohighlight">\(Y=1\)</span>, <span class="math notranslate nohighlight">\(n\)</span> is the number of observations, and
+<span class="math notranslate nohighlight">\(\lambda_i\)</span> is a shrinkage factor. The shrinkage factor is given by:</p>
+<div class="math notranslate nohighlight">
+\[\lambda_i = \frac{n_i}{m + n_i}\]</div>
+<p>where <span class="math notranslate nohighlight">\(m\)</span> is a smoothing factor, which is controlled with the <code class="docutils literal notranslate"><span class="pre">smooth</span></code>
+parameter in <a class="reference internal" href="generated/sklearn.preprocessing.TargetEncoder.html#sklearn.preprocessing.TargetEncoder" title="sklearn.preprocessing.TargetEncoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">TargetEncoder</span></code></a>. Large smoothing factors will put more
+weight on the global mean. When <code class="docutils literal notranslate"><span class="pre">smooth=&quot;auto&quot;</span></code>, the smoothing factor is
+computed as an empirical Bayes estimate: <span class="math notranslate nohighlight">\(m=\sigma_c^2/\tau^2\)</span>, where
+<span class="math notranslate nohighlight">\(\sigma_i^2\)</span> is the variance of <code class="docutils literal notranslate"><span class="pre">y</span></code> with category <span class="math notranslate nohighlight">\(i\)</span> and
+<span class="math notranslate nohighlight">\(\tau^2\)</span> is the global variance of <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
+<p>For continuous targets, the formulation is similar to binary classification:</p>
+<div class="math notranslate nohighlight">
+\[S_i = \lambda_i\frac{\sum_{k\in L_i}y_k}{n_i} + (1 - \lambda_i)\frac{\sum_{k=1}^{n}y_k}{n}\]</div>
+<p>where <span class="math notranslate nohighlight">\(L_i\)</span> is the set of observations for which <span class="math notranslate nohighlight">\(X=X_i\)</span> and
+<span class="math notranslate nohighlight">\(n_i\)</span> is the cardinality of <span class="math notranslate nohighlight">\(L_i\)</span>.</p>
+<p><a class="reference internal" href="generated/sklearn.preprocessing.TargetEncoder.html#sklearn.preprocessing.TargetEncoder.fit_transform" title="sklearn.preprocessing.TargetEncoder.fit_transform"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fit_transform</span></code></a> internally relies on a cross validation
+scheme to prevent information from the target from leaking into the train-time
+representation for non-informative high-cardinality categorical variables and
+help prevent the downstream model to overfit spurious correlations. Note that
+as a result, <code class="docutils literal notranslate"><span class="pre">fit(X,</span> <span class="pre">y).transform(X)</span></code> does not equal <code class="docutils literal notranslate"><span class="pre">fit_transform(X,</span> <span class="pre">y)</span></code>. In
+<a class="reference internal" href="generated/sklearn.preprocessing.TargetEncoder.html#sklearn.preprocessing.TargetEncoder.fit_transform" title="sklearn.preprocessing.TargetEncoder.fit_transform"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fit_transform</span></code></a>, the training data is split into multiple
+folds and encodes each fold by using the encodings trained on the other folds.
+After cross validation is complete in <a class="reference internal" href="generated/sklearn.preprocessing.TargetEncoder.html#sklearn.preprocessing.TargetEncoder.fit_transform" title="sklearn.preprocessing.TargetEncoder.fit_transform"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fit_transform</span></code></a>, the
+target encoder learns one final encoding on the whole training set. This final
+encoding is used to encode categories in <a class="reference internal" href="generated/sklearn.preprocessing.TargetEncoder.html#sklearn.preprocessing.TargetEncoder.transform" title="sklearn.preprocessing.TargetEncoder.transform"><code class="xref py py-meth docutils literal notranslate"><span class="pre">transform</span></code></a>. The
+following diagram shows the cross validation scheme in
+<a class="reference internal" href="generated/sklearn.preprocessing.TargetEncoder.html#sklearn.preprocessing.TargetEncoder.fit_transform" title="sklearn.preprocessing.TargetEncoder.fit_transform"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fit_transform</span></code></a> with the default <code class="docutils literal notranslate"><span class="pre">cv=5</span></code>:</p>
+<a class="reference internal image-reference" href="../_images/target_encoder_cross_validation.svg"><img alt="../_images/target_encoder_cross_validation.svg" class="align-center" src="../_images/target_encoder_cross_validation.svg" width="600" /></a>
+<p>The <a class="reference internal" href="generated/sklearn.preprocessing.TargetEncoder.html#sklearn.preprocessing.TargetEncoder.fit" title="sklearn.preprocessing.TargetEncoder.fit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fit</span></code></a> method does <strong>not</strong> use any cross validation
+schemes and learns one encoding on the entire training set, which is used to
+encode categories in <a class="reference internal" href="generated/sklearn.preprocessing.TargetEncoder.html#sklearn.preprocessing.TargetEncoder.transform" title="sklearn.preprocessing.TargetEncoder.transform"><code class="xref py py-meth docutils literal notranslate"><span class="pre">transform</span></code></a>.
+<a class="reference internal" href="generated/sklearn.preprocessing.TargetEncoder.html#sklearn.preprocessing.TargetEncoder.fit" title="sklearn.preprocessing.TargetEncoder.fit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fit</span></code></a>’s one encoding is the same as the final encoding
+learned in <a class="reference internal" href="generated/sklearn.preprocessing.TargetEncoder.html#sklearn.preprocessing.TargetEncoder.fit_transform" title="sklearn.preprocessing.TargetEncoder.fit_transform"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fit_transform</span></code></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference internal" href="generated/sklearn.preprocessing.TargetEncoder.html#sklearn.preprocessing.TargetEncoder" title="sklearn.preprocessing.TargetEncoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">TargetEncoder</span></code></a> considers missing values, such as <code class="docutils literal notranslate"><span class="pre">np.nan</span></code> or <code class="docutils literal notranslate"><span class="pre">None</span></code>,
+as another category and encodes them like any other category. Categories
+that are not seen during <code class="docutils literal notranslate"><span class="pre">fit</span></code> are encoded with the target mean, i.e.
+<code class="docutils literal notranslate"><span class="pre">target_mean_</span></code>.</p>
+</div>
+<aside class="topic">
+<p class="topic-title">Examples:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../auto_examples/preprocessing/plot_target_encoder.html#sphx-glr-auto-examples-preprocessing-plot-target-encoder-py"><span class="std std-ref">Comparing Target Encoder with Other Encoders</span></a></p></li>
+</ul>
+</aside>
+<aside class="topic">
+<p class="topic-title">References</p>
+<div role="list" class="citation-list">
+<div class="citation" id="mic" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">MIC</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://doi.org/10.1145/507533.507538">Micci-Barreca, Daniele. “A preprocessing scheme for high-cardinality
+categorical attributes in classification and prediction problems”
+SIGKDD Explor. Newsl. 3, 1 (July 2001), 27–32.</a></p>
+</div>
+<div class="citation" id="par" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">PAR</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://doi.org/10.1007/s00180-022-01207-6">Pargent, F., Pfisterer, F., Thomas, J. et al. “Regularized target
+encoding outperforms traditional methods in supervised machine learning with
+high cardinality features” Comput Stat 37, 2671–2692 (2022)</a></p>
+</div>
+</div>
+</aside>
+</section>
 </section>
 <section id="discretization">
 <span id="preprocessing-discretization"></span><h2><span class="section-number">6.3.5. </span>Discretization<a class="headerlink" href="#discretization" title="Permalink to this heading">¶</a></h2>
@@ -1013,7 +1129,7 @@ equally populated bins in each feature. The ‘kmeans’ strategy defines bins b
 on a k-means clustering procedure performed on each feature independently.</p>
 <p>Be aware that one can specify custom bins by passing a callable defining the
 discretization strategy to <a class="reference internal" href="generated/sklearn.preprocessing.FunctionTransformer.html#sklearn.preprocessing.FunctionTransformer" title="sklearn.preprocessing.FunctionTransformer"><code class="xref py py-class docutils literal notranslate"><span class="pre">FunctionTransformer</span></code></a>.
-For instance, we can use the Pandas function <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.cut.html#pandas.cut" title="(in pandas v1.5.3)"><code class="xref py py-func docutils literal notranslate"><span class="pre">pandas.cut</span></code></a>:</p>
+For instance, we can use the Pandas function <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.cut.html#pandas.cut" title="(in pandas v2.0.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">pandas.cut</span></code></a>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">bins</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">]</span>
@@ -1094,13 +1210,13 @@ representation upstream.</p>
 <p>Tools for imputing missing values are discussed at <a class="reference internal" href="impute.html#impute"><span class="std std-ref">Imputation of missing values</span></a>.</p>
 </section>
 <section id="generating-polynomial-features">
-<span id="id3"></span><h2><span class="section-number">6.3.7. </span>Generating polynomial features<a class="headerlink" href="#generating-polynomial-features" title="Permalink to this heading">¶</a></h2>
+<span id="id6"></span><h2><span class="section-number">6.3.7. </span>Generating polynomial features<a class="headerlink" href="#generating-polynomial-features" title="Permalink to this heading">¶</a></h2>
 <p>Often it’s useful to add complexity to a model by considering nonlinear
 features of the input data. We show two possibilities that are both based on
 polynomials: The first one uses pure polynomials, the second one uses splines,
 i.e. piecewise polynomials.</p>
 <section id="polynomial-features">
-<span id="id4"></span><h3><span class="section-number">6.3.7.1. </span>Polynomial features<a class="headerlink" href="#polynomial-features" title="Permalink to this heading">¶</a></h3>
+<span id="id7"></span><h3><span class="section-number">6.3.7.1. </span>Polynomial features<a class="headerlink" href="#polynomial-features" title="Permalink to this heading">¶</a></h3>
 <p>A simple and common method to use is polynomial features, which can get
 features’ high-order and interaction terms. It is implemented in
 <a class="reference internal" href="generated/sklearn.preprocessing.PolynomialFeatures.html#sklearn.preprocessing.PolynomialFeatures" title="sklearn.preprocessing.PolynomialFeatures"><code class="xref py py-class docutils literal notranslate"><span class="pre">PolynomialFeatures</span></code></a>:</p>
@@ -1142,7 +1258,7 @@ be gotten with the setting <code class="docutils literal notranslate"><span clas
 for Ridge regression using created polynomial features.</p>
 </section>
 <section id="spline-transformer">
-<span id="id5"></span><h3><span class="section-number">6.3.7.2. </span>Spline transformer<a class="headerlink" href="#spline-transformer" title="Permalink to this heading">¶</a></h3>
+<span id="id8"></span><h3><span class="section-number">6.3.7.2. </span>Spline transformer<a class="headerlink" href="#spline-transformer" title="Permalink to this heading">¶</a></h3>
 <p>Another way to add nonlinear terms instead of pure polynomials of features is
 to generate spline basis functions for each feature with the
 <a class="reference internal" href="generated/sklearn.preprocessing.SplineTransformer.html#sklearn.preprocessing.SplineTransformer" title="sklearn.preprocessing.SplineTransformer"><code class="xref py py-class docutils literal notranslate"><span class="pre">SplineTransformer</span></code></a>. Splines are piecewise polynomials, parametrized by

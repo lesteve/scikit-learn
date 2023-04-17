@@ -368,7 +368,7 @@ you can persist your models as explain in the <a class="reference external" href
 trusted by you. You can get existing unknown types in a dumped object / file
 using <a class="reference external" href="https://skops.readthedocs.io/en/stable/modules/classes.html#skops.io.get_untrusted_types" title="(in skops)"><code class="xref py py-func docutils literal notranslate"><span class="pre">skops.io.get_untrusted_types</span></code></a>, and after checking its contents,
 pass it to the load function:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">unknown_types</span> <span class="o">=</span> <span class="n">sio</span><span class="o">.</span><span class="n">get_untrusted_types</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">unknown_types</span> <span class="o">=</span> <span class="n">sio</span><span class="o">.</span><span class="n">get_untrusted_types</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">obj</span><span class="p">)</span>
 <span class="n">clf</span> <span class="o">=</span> <span class="n">sio</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">trusted</span><span class="o">=</span><span class="n">unknown_types</span><span class="p">)</span>
 </pre></div>
 </div>

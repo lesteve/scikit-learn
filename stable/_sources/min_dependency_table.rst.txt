@@ -2,7 +2,7 @@
 Dependency              Minimum Version     Purpose
 ======================= =================== ====================================
 numpy                   1.17.3              build, install
-scipy                   1.3.2               build, install
+scipy                   1.5.0               build, install
 joblib                  1.1.1               install
 threadpoolctl           2.0.0               install
 cython                  0.29.33             build

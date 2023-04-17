@@ -37,7 +37,7 @@ due to a noise effect and would not carry over to a held-out test set.
 Note that in practice, one would not search over this many different parameters
 simultaneously using grid search, but pick only the ones deemed most important.
 
-.. GENERATED FROM PYTHON SOURCE LINES 22-94
+.. GENERATED FROM PYTHON SOURCE LINES 22-93
 
 .. code-block:: default
 
@@ -46,7 +46,6 @@ simultaneously using grid search, but pick only the ones deemed most important.
 
     from time import time
     import scipy.stats as stats
-    from sklearn.utils.fixes import loguniform
 
     from sklearn.model_selection import GridSearchCV, RandomizedSearchCV
     from sklearn.datasets import load_digits
@@ -79,7 +78,7 @@ simultaneously using grid search, but pick only the ones deemed most important.
     param_dist = {
         "average": [True, False],
         "l1_ratio": stats.uniform(0, 1),
-        "alpha": loguniform(1e-2, 1e0),
+        "alpha": stats.loguniform(1e-2, 1e0),
     }
 
     # run randomized search

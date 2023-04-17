@@ -191,7 +191,7 @@
 <h1><a class="reference internal" href="../classes.html#module-sklearn.metrics" title="sklearn.metrics"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.metrics</span></code></a>.precision_recall_curve<a class="headerlink" href="#sklearn-metrics-precision-recall-curve" title="Permalink to this heading">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="sklearn.metrics.precision_recall_curve">
-<span class="sig-prename descclassname"><span class="pre">sklearn.metrics.</span></span><span class="sig-name descname"><span class="pre">precision_recall_curve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probas_pred</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/eed70a84f/sklearn/metrics/_ranking.py#L817"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sklearn.metrics.precision_recall_curve" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">sklearn.metrics.</span></span><span class="sig-name descname"><span class="pre">precision_recall_curve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probas_pred</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drop_intermediate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/59947d32c/sklearn/metrics/_ranking.py#L817"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sklearn.metrics.precision_recall_curve" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute precision-recall pairs for different probability thresholds.</p>
 <p>Note: this implementation is restricted to the binary classification task.</p>
 <p>The precision is the ratio <code class="docutils literal notranslate"><span class="pre">tp</span> <span class="pre">/</span> <span class="pre">(tp</span> <span class="pre">+</span> <span class="pre">fp)</span></code> where <code class="docutils literal notranslate"><span class="pre">tp</span></code> is the number of
@@ -207,9 +207,9 @@ y axis.</p>
 <p>The first precision and recall values are precision=class balance and recall=1.0
 which corresponds to a classifier that always predicts the positive class.</p>
 <p>Read more in the <a class="reference internal" href="../model_evaluation.html#precision-recall-f-measure-metrics"><span class="std std-ref">User Guide</span></a>.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><strong>y_true</strong><span class="classifier">array-like of shape (n_samples,)</span></dt><dd><p>True binary labels. If labels are not either {-1, 1} or {0, 1}, then
 pos_label should be explicitly given.</p>
 </dd>
@@ -222,6 +222,13 @@ When <code class="docutils literal notranslate"><span class="pre">pos_label=None
 <code class="docutils literal notranslate"><span class="pre">pos_label</span></code> is set to 1, otherwise an error will be raised.</p>
 </dd>
 <dt><strong>sample_weight</strong><span class="classifier">array-like of shape (n_samples,), default=None</span></dt><dd><p>Sample weights.</p>
+</dd>
+<dt><strong>drop_intermediate</strong><span class="classifier">bool, default=False</span></dt><dd><p>Whether to drop some suboptimal thresholds which would not appear
+on a plotted precision-recall curve. This is useful in order to create
+lighter precision-recall curves.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.3.</span></p>
+</div>
 </dd>
 </dl>
 </dd>
