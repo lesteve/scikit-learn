@@ -2,20 +2,20 @@
   "content": [
     {
       "content": null,
-      "created": "2023-04-17T19:34:19.917388Z",
+      "created": "2023-04-19T10:21:02.451491Z",
       "format": null,
-      "last_modified": "2023-04-17T19:34:16.985349Z",
+      "last_modified": "2023-04-19T10:20:59.959486Z",
       "mimetype": null,
       "name": "plot_classifier_chain_yeast.ipynb",
       "path": "auto_examples/multioutput/plot_classifier_chain_yeast.ipynb",
-      "size": 6146,
+      "size": 6056,
       "type": "notebook",
       "writable": true
     }
   ],
-  "created": "2023-04-17T19:34:19.917388Z",
+  "created": "2023-04-19T10:21:02.451491Z",
   "format": "json",
-  "last_modified": "2023-04-17T19:34:19.917388Z",
+  "last_modified": "2023-04-19T10:21:02.451491Z",
   "mimetype": null,
   "name": "multioutput",
   "path": "auto_examples/multioutput",

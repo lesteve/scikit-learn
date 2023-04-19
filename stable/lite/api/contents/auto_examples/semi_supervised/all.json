@@ -2,9 +2,9 @@
   "content": [
     {
       "content": null,
-      "created": "2023-04-17T19:34:19.929388Z",
+      "created": "2023-04-19T10:21:02.463491Z",
       "format": null,
-      "last_modified": "2023-04-17T19:34:17.001349Z",
+      "last_modified": "2023-04-19T10:20:59.971486Z",
       "mimetype": null,
       "name": "plot_semi_supervised_versus_svm_iris.ipynb",
       "path": "auto_examples/semi_supervised/plot_semi_supervised_versus_svm_iris.ipynb",
@@ -14,9 +14,9 @@
     },
     {
       "content": null,
-      "created": "2023-04-17T19:34:19.929388Z",
+      "created": "2023-04-19T10:21:02.459491Z",
       "format": null,
-      "last_modified": "2023-04-17T19:34:17.001349Z",
+      "last_modified": "2023-04-19T10:20:59.971486Z",
       "mimetype": null,
       "name": "plot_label_propagation_structure.ipynb",
       "path": "auto_examples/semi_supervised/plot_label_propagation_structure.ipynb",
@@ -26,9 +26,9 @@
     },
     {
       "content": null,
-      "created": "2023-04-17T19:34:19.929388Z",
+      "created": "2023-04-19T10:21:02.463491Z",
       "format": null,
-      "last_modified": "2023-04-17T19:34:17.001349Z",
+      "last_modified": "2023-04-19T10:20:59.971486Z",
       "mimetype": null,
       "name": "plot_semi_supervised_newsgroups.ipynb",
       "path": "auto_examples/semi_supervised/plot_semi_supervised_newsgroups.ipynb",
@@ -38,9 +38,9 @@
     },
     {
       "content": null,
-      "created": "2023-04-17T19:34:19.929388Z",
+      "created": "2023-04-19T10:21:02.459491Z",
       "format": null,
-      "last_modified": "2023-04-17T19:34:17.001349Z",
+      "last_modified": "2023-04-19T10:20:59.971486Z",
       "mimetype": null,
       "name": "plot_label_propagation_digits.ipynb",
       "path": "auto_examples/semi_supervised/plot_label_propagation_digits.ipynb",
@@ -50,9 +50,9 @@
     },
     {
       "content": null,
-      "created": "2023-04-17T19:34:19.929388Z",
+      "created": "2023-04-19T10:21:02.459491Z",
       "format": null,
-      "last_modified": "2023-04-17T19:34:17.001349Z",
+      "last_modified": "2023-04-19T10:20:59.971486Z",
       "mimetype": null,
       "name": "plot_self_training_varying_threshold.ipynb",
       "path": "auto_examples/semi_supervised/plot_self_training_varying_threshold.ipynb",
@@ -62,9 +62,9 @@
     },
     {
       "content": null,
-      "created": "2023-04-17T19:34:19.929388Z",
+      "created": "2023-04-19T10:21:02.459491Z",
       "format": null,
-      "last_modified": "2023-04-17T19:34:17.001349Z",
+      "last_modified": "2023-04-19T10:20:59.971486Z",
       "mimetype": null,
       "name": "plot_label_propagation_digits_active_learning.ipynb",
       "path": "auto_examples/semi_supervised/plot_label_propagation_digits_active_learning.ipynb",
@@ -73,9 +73,9 @@
       "writable": true
     }
   ],
-  "created": "2023-04-17T19:34:19.929388Z",
+  "created": "2023-04-19T10:21:02.463491Z",
   "format": "json",
-  "last_modified": "2023-04-17T19:34:19.929388Z",
+  "last_modified": "2023-04-19T10:21:02.463491Z",
   "mimetype": null,
   "name": "semi_supervised",
   "path": "auto_examples/semi_supervised",
