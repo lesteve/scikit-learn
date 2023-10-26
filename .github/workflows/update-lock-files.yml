@@ -9,6 +9,10 @@ jobs:
     if: "github.repository == 'scikit-learn/scikit-learn' || github.event_name == 'workflow_dispatch'"
     runs-on: ubuntu-latest
 
+    permissions:
+      pull-requests: write
+      contents: write
+
     strategy:
       # Ensure that each build will continue even if one build in the matrix fails
       fail-fast: false
@@ -42,8 +46,7 @@ jobs:
         id: cpr
         uses: peter-evans/create-pull-request@v5
         with:
-          token: ${{ secrets.BOT_GITHUB_TOKEN }}
-          push-to-fork: test-lesteve/scikit-learn
+          token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: Update CI lock files ${{ matrix.additional_commit_message }}
           committer: "Lock file bot <noreply@github.com>"
           author: "Lock file bot <noreply@github.com>"
