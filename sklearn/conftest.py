@@ -1,6 +1,9 @@
 import builtins
+import gc
+import json
 import platform
 import sys
+import time
 from contextlib import suppress
 from functools import wraps
 from os import environ
@@ -8,6 +11,7 @@ from unittest import SkipTest
 
 import joblib
 import numpy as np
+import psutil
 import pytest
 from _pytest.doctest import DoctestItem
 from threadpoolctl import threadpool_limits
@@ -307,3 +311,47 @@ def print_changed_only_false():
     set_config(print_changed_only=False)
     yield
     set_config(print_changed_only=True)  # reset to default
+
+
+memory_data = []
+
+
+def pytest_runtest_logstart(nodeid, location):
+    memory_usage = psutil.Process().memory_info().rss
+    pypy_memory_usage = gc.get_stats().memory_allocated_sum
+
+    filename, lineno, testname = location
+    memory_data.append(
+        {
+            "nodeid": nodeid,
+            "when": "start",
+            "memory_usage": memory_usage,
+            "filename": filename,
+            "testname": testname,
+            "time": time.time(),
+            "pypy_memory_usage": pypy_memory_usage,
+        }
+    )
+
+
+def pytest_runtest_logfinish(nodeid, location):
+    memory_usage = psutil.Process().memory_info().rss
+    pypy_memory_usage = gc.get_stats().memory_allocated_sum
+
+    filename, lineno, testname = location
+    memory_data.append(
+        {
+            "nodeid": nodeid,
+            "when": "finish",
+            "memory_usage": memory_usage,
+            "filename": filename,
+            "testname": testname,
+            "time": time.time(),
+            "pypy_memory_usage": pypy_memory_usage,
+        }
+    )
+
+
+def pytest_sessionfinish(session, exitstatus):
+    with open("memory_usage.json", "w") as f:
+        json.dump(memory_data, f, indent=2)
