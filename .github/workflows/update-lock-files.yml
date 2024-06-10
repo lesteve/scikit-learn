@@ -12,7 +12,7 @@ on:
 
 jobs:
   update_lock_files:
-    if: github.repository == 'scikit-learn/scikit-learn'
+    # if: github.repository == 'scikit-learn/scikit-learn'
     runs-on: ubuntu-latest
 
     strategy:
@@ -46,10 +46,10 @@ jobs:
 
       - name: Create Pull Request
         id: cpr
-        uses: peter-evans/create-pull-request@v5
+        uses: peter-evans/create-pull-request@v6
         with:
-          token: ${{ secrets.BOT_GITHUB_TOKEN }}
-          push-to-fork: scikit-learn-bot/scikit-learn
+          token: ${{ secrets.GITHUB_TOKEN }}
+          push-to-fork: lesteve/scikit-learn
           commit-message: Update CI lock files ${{ matrix.additional_commit_message }}
           committer: "Lock file bot <noreply@github.com>"
           author: "Lock file bot <noreply@github.com>"
