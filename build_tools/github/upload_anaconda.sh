@@ -12,6 +12,12 @@ else
     ANACONDA_TOKEN="$SCIKIT_LEARN_STAGING_UPLOAD_TOKEN"
 fi
 
+pwd
+ls -ltrh
+ls -ltrh dist || echo no dist
+
+echo $ARTIFACTS_PATH
+ls -ltrh $ARTIFACTS_PATH/*
 # Install Python 3.8 because of a bug with Python 3.9
 export PATH=$CONDA/bin:$PATH
 conda create -n upload -y python=3.8
@@ -19,5 +25,5 @@ source activate upload
 conda install -y anaconda-client
 
 # Force a replacement if the remote file already exists
-anaconda -t $ANACONDA_TOKEN upload --force -u $ANACONDA_ORG $ARTIFACTS_PATH/*
-echo "Index: https://pypi.anaconda.org/$ANACONDA_ORG/simple"
+# anaconda -t $ANACONDA_TOKEN upload --force -u $ANACONDA_ORG $ARTIFACTS_PATH/*
+# echo "Index: https://pypi.anaconda.org/$ANACONDA_ORG/simple"
