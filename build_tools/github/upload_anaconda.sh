@@ -20,6 +20,9 @@ ls -ltrh dist || echo no dist
 
 echo $ARTIFACTS_PATH
 ls -ltrh $ARTIFACTS_PATH/*
+
+echo "ANACONDA_ORG: $ANACONDA_ORG"
+
 # Install Python 3.8 because of a bug with Python 3.9
 export PATH=$CONDA/bin:$PATH
 conda create -n upload -y python=3.8
