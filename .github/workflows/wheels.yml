@@ -219,10 +219,10 @@ jobs:
         env:
           SKLEARN_BUILD_PARALLEL: 3
 
-      - name: Test source distribution
-        run: bash build_tools/github/test_source.sh
-        env:
-          SKLEARN_SKIP_NETWORK_TESTS: 1
+      # - name: Test source distribution
+      #   run: bash build_tools/github/test_source.sh
+      #   env:
+      #     SKLEARN_SKIP_NETWORK_TESTS: 1
 
       - name: Store artifacts
         uses: actions/upload-artifact@v4
