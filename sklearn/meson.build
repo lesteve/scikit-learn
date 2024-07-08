@@ -29,25 +29,23 @@ endif
 # Only check numpy and scipy versions when not cross-compiling, as numpy and
 # scipy are not installed in the build machine. For more details, see
 # https://docs.scipy.org/doc/scipy/building/cross_compilation.html
-if not meson.is_cross_build()
-    numpy_version = run_command(py,
-      ['-c', 'import numpy; print(numpy.__version__)'], check: true).stdout().strip()
-    numpy_min_version = run_command(py, ['_min_dependencies.py', 'numpy'], check: true).stdout().strip()
-    if not numpy_version.version_compare('>=' + numpy_min_version)
-      error('scikit-learn requires numpy>=' + numpy_min_version + ', got ' + numpy_version + ' instead')
-    endif
-    scipy_version = run_command(py,
-      ['-c', 'import scipy; print(scipy.__version__)'], check: true).stdout().strip()
-    scipy_min_version = run_command(py, ['_min_dependencies.py', 'scipy'], check: true).stdout().strip()
-    if not scipy_version.version_compare('>=' + scipy_min_version)
-      error('scikit-learn requires scipy>=' + scipy_min_version + ', got ' + scipy_version + ' instead')
-    endif
-    meson_python_version = run_command(py,
-      ['-c', 'import mesonpy; print(mesonpy.__version__)'], check: true).stdout().strip()
-    meson_python_min_version = run_command(py, ['_min_dependencies.py', 'meson-python'], check: true).stdout().strip()
-    if not meson_python_version.version_compare('>=' + meson_python_min_version)
-      error('scikit-learn requires meson-python>=' + meson_python_min_version + ', got ' + meson_python_version + ' instead')
-    endif
+numpy_version = run_command(py,
+  ['-c', 'import numpy; print(numpy.__version__)'], check: true).stdout().strip()
+numpy_min_version = run_command(py, ['_min_dependencies.py', 'numpy'], check: true).stdout().strip()
+if not numpy_version.version_compare('>=' + numpy_min_version)
+  warning('scikit-learn requires numpy>=' + numpy_min_version + ', got ' + numpy_version + ' instead')
+endif
+scipy_version = run_command(py,
+  ['-c', 'import scipy; print(scipy.__version__)'], check: true).stdout().strip()
+scipy_min_version = run_command(py, ['_min_dependencies.py', 'scipy'], check: true).stdout().strip()
+if not scipy_version.version_compare('>=' + scipy_min_version)
+  warning('scikit-learn requires scipy>=' + scipy_min_version + ', got ' + scipy_version + ' instead')
+endif
+meson_python_version = run_command(py,
+  ['-c', 'import mesonpy; print(mesonpy.__version__)'], check: true).stdout().strip()
+meson_python_min_version = run_command(py, ['_min_dependencies.py', 'meson-python'], check: true).stdout().strip()
+if not meson_python_version.version_compare('>=' + meson_python_min_version)
+  warning('scikit-learn requires meson-python>=' + meson_python_min_version + ', got ' + meson_python_version + ' instead')
 endif
 
 # Adapted from scipy, each project seems to have its own tweaks for this. One
