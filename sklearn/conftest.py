@@ -10,6 +10,11 @@ from os import environ
 from unittest import SkipTest
 
 import joblib
+
+joblib.parallel.DEFAULT_BACKEND = "threading"
+p = joblib.Parallel()
+assert "Threading" in str(p._backend), p._backend
+
 import numpy as np
 import pytest
 from _pytest.doctest import DoctestItem
