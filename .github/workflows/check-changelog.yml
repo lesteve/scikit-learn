@@ -31,3 +31,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BOT_USERNAME: changelog-bot
+
+      - name:
+        if: failure()
+        run: |
+          set -xe
+          echo "The changelog check failed, for more details about adding a changelog entry, look at:"
+          echo "https://github.com/scikit-learn/scikit-learn/blob/main/doc/whats_new/upcoming_changes/README.md"
