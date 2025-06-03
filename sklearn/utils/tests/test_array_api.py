@@ -14,7 +14,7 @@ from sklearn.utils._array_api import (
     _convert_to_numpy,
     _count_nonzero,
     _estimator_with_converted_arrays,
-    _fill_or_add_to_diagonal,
+    _fill_diagonal,
     _get_namespace_device_dtype_ids,
     _is_numpy_namespace,
     _isin,
@@ -578,18 +578,15 @@ def test_count_nonzero(
     yield_namespace_device_dtype_combinations(),
     ids=_get_namespace_device_dtype_ids,
 )
-@pytest.mark.parametrize("wrap", [True, False])
-def test_fill_or_add_to_diagonal(array_namespace, device_, dtype_name, wrap):
+def test_fill_diagonal(array_namespace, device_, dtype_name):
     xp = _array_api_for_tests(array_namespace, device_)
 
     array_np = numpy.zeros((5, 4), dtype=dtype_name)
     array_xp = xp.asarray(array_np.copy(), device=device_)
 
-    numpy.fill_diagonal(array_np, val=1, wrap=wrap)
+    numpy.fill_diagonal(array_np, val=1)
     with config_context(array_api_dispatch=True):
-        array_xp = _fill_or_add_to_diagonal(
-            array_xp, value=1, xp=xp, add_value=False, wrap=wrap
-        )
+        _fill_diagonal(array_xp, value=1, xp=xp)
 
     assert_array_equal(_convert_to_numpy(array_xp, xp=xp), array_np)
 
@@ -601,7 +598,7 @@ def test_fill_or_add_to_diagonal_transpose():
     # within `_fill_or_add_to_diagonal`, returns a copy instead of a view. Note
     # `numpy.fill_diagonal` avoids this problem as it uses `.flat` instead of `reshape`
     array = numpy.ones((2, 2)).T
-    array = _fill_or_add_to_diagonal(array, value=99, xp=xp, add_value=False)
+    _fill_diagonal(array, value=99, xp=xp)
     assert array[0, 0] == 99
 
 
