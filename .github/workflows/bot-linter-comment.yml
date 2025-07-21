@@ -1,0 +1,45 @@
+# This workflow triggers the commenter bot, it is triggered by lint.yml which
+# stores the results of the linting into an artifact
+name: Bot linter comment
+# We need these permissions to be able to post / update comments
+permissions:
+  pull-requests: write
+  issues: write
+
+on:
+  workflow_run:
+    workflows: ["linter"]
+    types:
+      - completed
+
+jobs:
+  bot-comment:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion != 'cancelled' }}
+    steps:
+      - run: mkdir -p ${{ runner.temp }}/artifacts
+      - name: "Download artifact"
+        uses: actions/download-artifact@v4
+        with:
+          name: results
+          path: ${{ runner.temp }}/artifacts
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ github.event.workflow_run.id }}
+      - env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH_SHA: ${{ github.event.workflow_run.head_sha }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+        run: |
+          set -x
+          ARTIFACTS_DIR="${{ runner.temp }}/artifacts"
+          ls "$ARTIFACTS_DIR" -ltra
+          export PR_NUMBER=$(cat $ARTIFACTS_DIR/pr_number.txt)
+          export LOG_FILE="$ARTIFACTS_DIR/lintint_output.txt"
+          export VERSIONS_FILE="$ARTIFACTS_DIR/versions.txt"
+          echo "$PR_NUMBER"
+          echo BRANCH_SHA: $BRANCH_SHA
+          echo RUN_ID: $RUN_ID
+          cat "$ARTIFACTS_DIR/run-id.txt"
+          cat "$LOG_FILE"
+          cat "$VERSIONS_FILE"
+          python ./build_tools/get_comment.py
