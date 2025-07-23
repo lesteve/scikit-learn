@@ -12,7 +12,7 @@ def get_commit_message():
 
     if (
         os.environ.get("BUILD_REASON") == "PullRequest"
-        or os.environ.get("EVENT_NAME") == "pull_request"
+        or os.environ.get("GITHUB_EVENT_NAME") == "pull_request"
     ):
         # By default pull requests use refs/pull/PULL_ID/merge as the source branch
         # which has a "Merge ID into ID" as a commit message. The latest commit
