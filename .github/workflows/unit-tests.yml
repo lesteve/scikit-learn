@@ -61,7 +61,9 @@ jobs:
           env | grep GITHUB
           git log -1
           echo $GITHUB_REF
-          git log $GITHUB_REF -1
+          git log $GITHUB_HEAD_REF -1 || echo
+          git log $GITHUB_REF -1 || echo
+
       - uses: conda-incubator/setup-miniconda@v3
         with:
           miniforge-version: latest
