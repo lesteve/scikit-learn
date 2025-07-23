@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+set -xe
 
 # Defines the show_installed_libraries and activate_environment functions.
 source build_tools/shared.sh
