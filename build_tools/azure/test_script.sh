@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -xe
+set -e
 
 # Defines the show_installed_libraries and activate_environment functions.
 source build_tools/shared.sh
@@ -22,7 +22,6 @@ if [[ "$BUILD_REASON" == "Schedule" ]]; then
     export SKLEARN_RUN_FLOAT32_TESTS=1
 fi
 
-# TODO make get_commit_message.py work on GHA
 COMMIT_MESSAGE=$(python build_tools/azure/get_commit_message.py --only-show-message)
 
 if [[ "$COMMIT_MESSAGE" =~ \[float32\] ]]; then

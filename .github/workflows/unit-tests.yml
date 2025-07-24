@@ -15,35 +15,35 @@ env:
   TEST_DIR: ${{ github.workspace }}/tmp_folder
 
 jobs:
-  # lint:
-  #   name: Lint
-  #   runs-on: ubuntu-latest
-  #   # if: github.repository == 'scikit-learn/scikit-learn'
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    if: github.repository == 'scikit-learn/scikit-learn'
 
-  #   steps:
-  #     - name: Checkout
-  #       uses: actions/checkout@v4
-  #     - uses: actions/setup-python@v5
-  #       with:
-  #         python-version: '3.12'
-  #         cache: 'pip'
-  #     - name: Install linters
-  #       run: |
-  #         source build_tools/shared.sh
-  #         # Include pytest compatibility with mypy
-  #         pip install pytest $(get_dep ruff min) $(get_dep mypy min) cython-lint
-  #     - name: Run linters
-  #       run: ./build_tools/linting.sh
-  #     - name: Run Meson OpenMP checks
-  #       run: |
-  #         pip install ninja meson scipy
-  #         python build_tools/check-meson-openmp-dependencies.py
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+      - name: Install linters
+        run: |
+          source build_tools/shared.sh
+          # Include pytest compatibility with mypy
+          pip install pytest $(get_dep ruff min) $(get_dep mypy min) cython-lint
+      - name: Run linters
+        run: ./build_tools/linting.sh
+      - name: Run Meson OpenMP checks
+        run: |
+          pip install ninja meson scipy
+          python build_tools/check-meson-openmp-dependencies.py
 
   unit-tests:
     name: ${{ matrix.name }}
     runs-on: ${{ matrix.os }}
-    # if: github.repository == 'scikit-learn/scikit-learn'
-    # needs: [lint]
+    if: github.repository == 'scikit-learn/scikit-learn'
+    needs: [lint]
     strategy:
       # Ensures that all builds run to completion even if one of them fails
       fail-fast: false
@@ -57,29 +57,14 @@ jobs:
     env: ${{ matrix }}
 
     steps:
-      - run: |
-          env
       - name: Checkout
         uses: actions/checkout@v4
       - uses: conda-incubator/setup-miniconda@v3
         with:
           miniforge-version: latest
-        # with:
-        #   environment-file: build_tools/github/pymin_conda_forge_arm_linux-aarch64_conda.lock
-        #   environment-name: ci
-        #   cache-environment: true
-
-      - name: debug
-        shell: bash -l {0}
-        run: |
-          type conda
-          conda create -n bla python -y
-          conda activate bla
 
       - name: Build scikit-learn
-        shell: bash -l {0}
         run: bash -l build_tools/azure/install.sh
 
       - name: Run tests
-        shell: bash -l {0}
         run: bash -l build_tools/azure/test_script.sh
