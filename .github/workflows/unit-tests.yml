@@ -62,6 +62,8 @@ jobs:
       - uses: conda-incubator/setup-miniconda@v3
         with:
           miniforge-version: latest
+          auto-activate-base: true
+          activate-environment: ""
 
       - name: Build scikit-learn
         run: bash -l build_tools/azure/install.sh
