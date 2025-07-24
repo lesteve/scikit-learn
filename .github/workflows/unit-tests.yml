@@ -72,13 +72,14 @@ jobs:
       - name: debug
         shell: bash -l {0}
         run: |
+          type conda
           conda create -n bla python -y
           conda activate bla
 
       - name: Build scikit-learn
         shell: bash -l {0}
-        run: ./build_tools/azure/install.sh
+        run: bash -l build_tools/azure/install.sh
 
       - name: Run tests
         shell: bash -l {0}
-        run: ./build_tools/azure/test_script.sh
+        run: bash -l build_tools/azure/test_script.sh
