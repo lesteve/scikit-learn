@@ -28,9 +28,7 @@ show_installed_libraries(){
 
 activate_environment() {
     if [[ "$DISTRIB" =~ ^conda.* ]]; then
-        # For historical reasons Azure sets PATH and uses source activate
-        # TODO: only use conda activate when all CI is on GHA
-        which activate && source activate $VIRTUALENV || conda activate $VIRTUALENV
+        source activate $VIRTUALENV
     elif [[ "$DISTRIB" == "ubuntu" || "$DISTRIB" == "debian-32" ]]; then
         source $VIRTUALENV/bin/activate
     fi
