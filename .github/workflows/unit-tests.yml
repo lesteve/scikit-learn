@@ -49,10 +49,10 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os: ubuntu-24.04-arm
+          - name: "pymin_conda_forge_arm_linux-aarch64"
+            os: ubuntu-24.04-arm
             DISTRIB: conda
             LOCK_FILE: build_tools/github/pymin_conda_forge_arm_linux-aarch64_conda.lock
-            name: "pymin_conda_forge_arm_linux-aarch64"
 
     env: ${{ matrix }}
 
@@ -69,10 +69,16 @@ jobs:
         #   environment-name: ci
         #   cache-environment: true
 
+      - name: debug
+        shell: bash -l {0}
+        run: |
+          conda create -n bla python -y
+          conda activate bla
+
       - name: Build scikit-learn
-        shell: bash -el {0}
+        shell: bash -l {0}
         run: ./build_tools/azure/install.sh
 
       - name: Run tests
-        shell: bash -el {0}
+        shell: bash -l {0}
         run: ./build_tools/azure/test_script.sh
