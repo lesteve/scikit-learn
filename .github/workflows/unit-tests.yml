@@ -40,7 +40,7 @@ jobs:
   #         python build_tools/check-meson-openmp-dependencies.py
 
   unit-tests:
-    name: Run unit tests ${{ matrix.name }} ${{ matrix.os }}
+    name: ${{ matrix.name }}
     runs-on: ${{ matrix.os }}
     # if: github.repository == 'scikit-learn/scikit-learn'
     # needs: [lint]
