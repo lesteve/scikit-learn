@@ -1,5 +1,6 @@
 .. -*- mode: rst -*-
 
+
 |Azure| |Codecov| |CircleCI| |Nightly wheels| |Ruff| |PythonVersion| |PyPi| |DOI| |Benchmark|
 
 .. |Azure| image:: https://dev.azure.com/scikit-learn/scikit-learn/_apis/build/status/scikit-learn.scikit-learn?branchName=main
