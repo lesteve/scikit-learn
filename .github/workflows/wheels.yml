@@ -25,22 +25,22 @@ concurrency:
 
 jobs:
   # Check whether to build the wheels and the source tarball
-  check_build_trigger:
-    name: Check build trigger
-    runs-on: ubuntu-latest
-    if: github.repository == 'scikit-learn/scikit-learn'
-    outputs:
-      build: ${{ steps.check_build_trigger.outputs.build }}
+  # check_build_trigger:
+  #   name: Check build trigger
+  #   runs-on: ubuntu-latest
+  #   if: github.repository == 'scikit-learn/scikit-learn'
+  #   outputs:
+  #     build: ${{ steps.check_build_trigger.outputs.build }}
 
-    steps:
-      - name: Checkout scikit-learn
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
+  #   steps:
+  #     - name: Checkout scikit-learn
+  #       uses: actions/checkout@v4
+  #       with:
+  #         ref: ${{ github.event.pull_request.head.sha }}
 
-      - id: check_build_trigger
-        name: Check build trigger
-        run: bash build_tools/github/check_build_trigger.sh
+  #     - id: check_build_trigger
+  #       name: Check build trigger
+  #       run: bash build_tools/github/check_build_trigger.sh
 
   # Build the wheels for Linux, Windows and macOS for Python 3.9 and newer
   build_wheels:
@@ -51,8 +51,8 @@ jobs:
     defaults:
       run:
         shell: bash -el {0}
-    needs: check_build_trigger
-    if: needs.check_build_trigger.outputs.build
+    # needs: check_build_trigger
+    # if: needs.check_build_trigger.outputs.build
 
     strategy:
       # Ensure that a wheel builder finishes even if another fails
@@ -60,138 +60,138 @@ jobs:
       matrix:
         include:
           # Window 64 bit
-          - os: windows-latest
-            python: 310
-            platform_id: win_amd64
-          - os: windows-latest
-            python: 311
-            platform_id: win_amd64
-          - os: windows-latest
-            python: 312
-            platform_id: win_amd64
-          - os: windows-latest
-            python: 313
-            platform_id: win_amd64
-          - os: windows-latest
-            python: 313t
-            platform_id: win_amd64
-            cibw_enable: cpython-freethreading
-          - os: windows-latest
-            python: 314
-            platform_id: win_amd64
-          - os: windows-latest
-            python: 314t
-            platform_id: win_amd64
+          # - os: windows-latest
+          #   python: 310
+          #   platform_id: win_amd64
+          # - os: windows-latest
+          #   python: 311
+          #   platform_id: win_amd64
+          # - os: windows-latest
+          #   python: 312
+          #   platform_id: win_amd64
+          # - os: windows-latest
+          #   python: 313
+          #   platform_id: win_amd64
+          # - os: windows-latest
+          #   python: 313t
+          #   platform_id: win_amd64
+          #   cibw_enable: cpython-freethreading
+          # - os: windows-latest
+          #   python: 314
+          #   platform_id: win_amd64
+          # - os: windows-latest
+          #   python: 314t
+          #   platform_id: win_amd64
 
           # Linux 64 bit manylinux2014
-          - os: ubuntu-latest
-            python: 310
-            platform_id: manylinux_x86_64
-            manylinux_image: manylinux2014
-          - os: ubuntu-latest
-            python: 311
-            platform_id: manylinux_x86_64
-            manylinux_image: manylinux2014
-          - os: ubuntu-latest
-            python: 312
-            platform_id: manylinux_x86_64
-            manylinux_image: manylinux2014
-          - os: ubuntu-latest
-            python: 313
-            platform_id: manylinux_x86_64
-            manylinux_image: manylinux2014
-          - os: ubuntu-latest
-            python: 313t
-            platform_id: manylinux_x86_64
-            manylinux_image: manylinux2014
-            cibw_enable: cpython-freethreading
-          - os: ubuntu-latest
-            python: 314
-            platform_id: manylinux_x86_64
-            manylinux_image: manylinux2014
-          - os: ubuntu-latest
-            python: 314t
-            platform_id: manylinux_x86_64
-            manylinux_image: manylinux2014
+          # - os: ubuntu-latest
+          #   python: 310
+          #   platform_id: manylinux_x86_64
+          #   manylinux_image: manylinux2014
+          # - os: ubuntu-latest
+          #   python: 311
+          #   platform_id: manylinux_x86_64
+          #   manylinux_image: manylinux2014
+          # - os: ubuntu-latest
+          #   python: 312
+          #   platform_id: manylinux_x86_64
+          #   manylinux_image: manylinux2014
+          # - os: ubuntu-latest
+          #   python: 313
+          #   platform_id: manylinux_x86_64
+          #   manylinux_image: manylinux2014
+          # - os: ubuntu-latest
+          #   python: 313t
+          #   platform_id: manylinux_x86_64
+          #   manylinux_image: manylinux2014
+          #   cibw_enable: cpython-freethreading
+          # - os: ubuntu-latest
+          #   python: 314
+          #   platform_id: manylinux_x86_64
+          #   manylinux_image: manylinux2014
+          # - os: ubuntu-latest
+          #   python: 314t
+          #   platform_id: manylinux_x86_64
+          #   manylinux_image: manylinux2014
 
           # Linux 64 bit manylinux2014
-          - os: ubuntu-24.04-arm
-            python: 310
-            platform_id: manylinux_aarch64
-            manylinux_image: manylinux2014
-          - os: ubuntu-24.04-arm
-            python: 311
-            platform_id: manylinux_aarch64
-            manylinux_image: manylinux2014
-          - os: ubuntu-24.04-arm
-            python: 312
-            platform_id: manylinux_aarch64
-            manylinux_image: manylinux2014
-          - os: ubuntu-24.04-arm
-            python: 313
-            platform_id: manylinux_aarch64
-            manylinux_image: manylinux2014
-          - os: ubuntu-24.04-arm
-            python: 313t
-            platform_id: manylinux_aarch64
-            manylinux_image: manylinux2014
-            cibw_enable: cpython-freethreading
-          - os: ubuntu-24.04-arm
-            python: 314
-            platform_id: manylinux_aarch64
-            manylinux_image: manylinux2014
-          - os: ubuntu-24.04-arm
-            python: 314t
-            platform_id: manylinux_aarch64
-            manylinux_image: manylinux2014
+          # - os: ubuntu-24.04-arm
+          #   python: 310
+          #   platform_id: manylinux_aarch64
+          #   manylinux_image: manylinux2014
+          # - os: ubuntu-24.04-arm
+          #   python: 311
+          #   platform_id: manylinux_aarch64
+          #   manylinux_image: manylinux2014
+          # - os: ubuntu-24.04-arm
+          #   python: 312
+          #   platform_id: manylinux_aarch64
+          #   manylinux_image: manylinux2014
+          # - os: ubuntu-24.04-arm
+          #   python: 313
+          #   platform_id: manylinux_aarch64
+          #   manylinux_image: manylinux2014
+          # - os: ubuntu-24.04-arm
+          #   python: 313t
+          #   platform_id: manylinux_aarch64
+          #   manylinux_image: manylinux2014
+          #   cibw_enable: cpython-freethreading
+          # - os: ubuntu-24.04-arm
+          #   python: 314
+          #   platform_id: manylinux_aarch64
+          #   manylinux_image: manylinux2014
+          # - os: ubuntu-24.04-arm
+          #   python: 314t
+          #   platform_id: manylinux_aarch64
+          #   manylinux_image: manylinux2014
 
           # MacOS x86_64
-          - os: macos-13
-            python: 310
-            platform_id: macosx_x86_64
-          - os: macos-13
-            python: 311
-            platform_id: macosx_x86_64
-          - os: macos-13
-            python: 312
-            platform_id: macosx_x86_64
+          # - os: macos-13
+          #   python: 310
+          #   platform_id: macosx_x86_64
+          # - os: macos-13
+          #   python: 311
+          #   platform_id: macosx_x86_64
+          # - os: macos-13
+          #   python: 312
+          #   platform_id: macosx_x86_64
           - os: macos-13
             python: 313
             platform_id: macosx_x86_64
-          - os: macos-13
-            python: 313t
-            platform_id: macosx_x86_64
-            cibw_enable: cpython-freethreading
-          - os: macos-13
-            python: 314
-            platform_id: macosx_x86_64
-          - os: macos-13
-            python: 314t
-            platform_id: macosx_x86_64
+          # - os: macos-13
+          #   python: 313t
+          #   platform_id: macosx_x86_64
+          #   cibw_enable: cpython-freethreading
+          # - os: macos-13
+          #   python: 314
+          #   platform_id: macosx_x86_64
+          # - os: macos-13
+          #   python: 314t
+          #   platform_id: macosx_x86_64
 
           # MacOS arm64
-          - os: macos-14
-            python: 310
-            platform_id: macosx_arm64
-          - os: macos-14
-            python: 311
-            platform_id: macosx_arm64
-          - os: macos-14
-            python: 312
-            platform_id: macosx_arm64
-          - os: macos-14
-            python: 313
-            platform_id: macosx_arm64
-          - os: macos-14
-            python: 313t
-            platform_id: macosx_arm64
-            cibw_enable: cpython-freethreading
-          - os: macos-14
-            python: 314
-            platform_id: macosx_arm64
-          - os: macos-14
-            python: 314t
-            platform_id: macosx_arm64
+          # - os: macos-14
+          #   python: 310
+          #   platform_id: macosx_arm64
+          # - os: macos-14
+          #   python: 311
+          #   platform_id: macosx_arm64
+          # - os: macos-14
+          #   python: 312
+          #   platform_id: macosx_arm64
+          # - os: macos-14
+          #   python: 313
+          #   platform_id: macosx_arm64
+          # - os: macos-14
+          #   python: 313t
+          #   platform_id: macosx_arm64
+          #   cibw_enable: cpython-freethreading
+          # - os: macos-14
+          #   python: 314
+          #   platform_id: macosx_arm64
+          # - os: macos-14
+          #   python: 314t
+          #   platform_id: macosx_arm64
 
     steps:
       - name: Checkout scikit-learn
