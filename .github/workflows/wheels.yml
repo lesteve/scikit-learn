@@ -241,44 +241,44 @@ jobs:
           name: cibw-wheels-cp${{ matrix.python }}-${{ matrix.platform_id }}
           path: wheelhouse/*.whl
 
-  update-tracker:
-    uses: ./.github/workflows/update_tracking_issue.yml
-    if: ${{ always() }}
-    needs: [build_wheels]
-    with:
-      job_status: ${{ needs.build_wheels.result }}
-    secrets:
-      BOT_GITHUB_TOKEN: ${{ secrets.BOT_GITHUB_TOKEN }}
+  # update-tracker:
+  #   uses: ./.github/workflows/update_tracking_issue.yml
+  #   if: ${{ always() }}
+  #   needs: [build_wheels]
+  #   with:
+  #     job_status: ${{ needs.build_wheels.result }}
+  #   secrets:
+  #     BOT_GITHUB_TOKEN: ${{ secrets.BOT_GITHUB_TOKEN }}
 
   # Build the source distribution under Linux
-  build_sdist:
-    name: Source distribution
-    runs-on: ubuntu-latest
-    needs: check_build_trigger
-    if: needs.check_build_trigger.outputs.build
+  # build_sdist:
+  #   name: Source distribution
+  #   runs-on: ubuntu-latest
+  #   needs: check_build_trigger
+  #   if: needs.check_build_trigger.outputs.build
 
-    steps:
-      - name: Checkout scikit-learn
-        uses: actions/checkout@v4
+  #   steps:
+  #     - name: Checkout scikit-learn
+  #       uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
+  #     - name: Setup Python
+  #       uses: actions/setup-python@v5
+  #       with:
+  #         python-version: "3.12"
 
-      - name: Build source distribution
-        run: bash build_tools/github/build_source.sh
+  #     - name: Build source distribution
+  #       run: bash build_tools/github/build_source.sh
 
-      - name: Test source distribution
-        run: bash build_tools/github/test_source.sh
-        env:
-          SKLEARN_SKIP_NETWORK_TESTS: 1
+  #     - name: Test source distribution
+  #       run: bash build_tools/github/test_source.sh
+  #       env:
+  #         SKLEARN_SKIP_NETWORK_TESTS: 1
 
-      - name: Store artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: cibw-sdist
-          path: dist/*.tar.gz
+  #     - name: Store artifacts
+  #       uses: actions/upload-artifact@v4
+  #       with:
+  #         name: cibw-sdist
+  #         path: dist/*.tar.gz
 
   # Upload the wheels and the source distribution
   # upload_anaconda:
