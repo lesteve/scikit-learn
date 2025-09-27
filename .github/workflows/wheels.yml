@@ -236,6 +236,9 @@ jobs:
 
         run: bash build_tools/wheels/build_wheels.sh
 
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+
       - name: Store artifacts
         uses: actions/upload-artifact@v4
         with:
