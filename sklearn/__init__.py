@@ -23,7 +23,8 @@ import random
 
 from sklearn._config import config_context, get_config, set_config
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger(__name__
+                          )
 
 
 # PEP0440 compatible formatted version, see:
