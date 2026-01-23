@@ -26,7 +26,7 @@ jobs:
   lint:
     name: Lint
     runs-on: ubuntu-latest
-    if: github.repository == 'scikit-learn/scikit-learn'
+    # if: github.repository == 'scikit-learn/scikit-learn'
 
     steps:
       - name: Checkout
@@ -50,7 +50,7 @@ jobs:
   retrieve-commit-message:
     name: Retrieve the latest commit message
     runs-on: ubuntu-latest
-    if: github.repository == 'scikit-learn/scikit-learn'
+    # if: github.repository == 'scikit-learn/scikit-learn'
     outputs:
       message: ${{ steps.git-log.outputs.message }}
     steps:
@@ -84,7 +84,7 @@ jobs:
     #     ...
     name: Retrieve the selected tests
     runs-on: ubuntu-latest
-    if: github.repository == 'scikit-learn/scikit-learn'
+    # if: github.repository == 'scikit-learn/scikit-learn'
     outputs:
       tests: ${{ steps.selected-tests.outputs.tests }}
     needs: [retrieve-commit-message]
@@ -115,7 +115,7 @@ jobs:
   unit-tests:
     name: ${{ matrix.name }}
     runs-on: ${{ matrix.os }}
-    if: github.repository == 'scikit-learn/scikit-learn'
+    # if: github.repository == 'scikit-learn/scikit-learn'
     needs: [lint, retrieve-commit-message, retrieve-selected-tests]
     strategy:
       # Ensures that all builds run to completion even if one of them fails
@@ -212,7 +212,7 @@ jobs:
 
     env: ${{ matrix }}
 
-    steps:
+    steps: &common-steps
       - name: Checkout
         uses: actions/checkout@v6
 
@@ -281,3 +281,15 @@ jobs:
             --junit-file $TEST_DIR/$JUNITXML \
             --auto-close false \
             --job-name "${{ matrix.name }}"
+
+  free-threaded:
+    name: Linux x86-64 free-threaded
+    runs-on: ubuntu-latest
+    # if: ${{ contains(needs.retrieve-commit-message.outputs.message, '[free-threaded]' }}
+    env:
+      DISTRIB: 'conda-free-threaded'
+      LOCK_FILE: './build_tools/azure/pylatest_free_threaded_linux-64_conda.lock'
+      COVERAGE: 'false'
+      # Disable pytest-xdist to use multiple cores for stress-testing with pytest-run-parallel
+      PYTEST_XDIST_VERSION: 'none'
+    steps: *common-steps
