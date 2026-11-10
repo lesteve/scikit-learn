@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   label-contributor-type:
-    if: github.repository == 'scikit-learn/scikit-learn'
+    # if: github.repository == 'scikit-learn/scikit-learn'
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
